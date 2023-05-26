@@ -47,7 +47,19 @@ html
     --light-color:#e4e1e1;
     --btn-color:#000000;
     --dots-color:#ffffff;
-    --dishes-color:#000000;
+    --evenPages-color:black;
+}
+
+.neon-mode:hover
+{
+    --bg-color:black;
+    --black:#fff;
+    --box-shadow:0rem 0rem 10rem #00b3ff;
+    --underBoxtext-color:#000000;
+    --logo-color:rgb(255, 255, 255);
+    --btn-color:black;
+    --evenPages-color:black;
+    --light-color:#e4e1e1;
 }
 
 
@@ -58,7 +70,7 @@ section
 
 section:nth-child(even)
 {
-    background:var(--dishes-color);
+    background:var(--evenPages-color);
 }
 
 .sub-heading                       /*  for dishes section   */
@@ -88,6 +100,7 @@ section:nth-child(even)
     border-radius: .5rem;
     cursor: pointer;
     padding: .8rem 3rem;
+    border: .1rem solid var(--btn-color);
 }
 
 .btn:hover
@@ -105,8 +118,8 @@ header
     top: 0;
     left: 0;
     right: 0;
-    background: #fff;
-    padding: 1rem 7%;
+    background:var(--underBoxtext-color);
+    padding: 1rem 3%;
     z-index: 1000;
     box-shadow: var(--box-shadow);
 }
@@ -145,7 +158,7 @@ header .icons i, header .icons a
     line-height: 4.5rem;
     width: 4.5rem;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: var(--icon-color);
     border-radius: 50%;
     background: #eee;
@@ -332,7 +345,7 @@ header .icons #menu-bars
 .dishes .box-container .box                    
 {
     padding: 2.5rem;
-    background: #fff;                               /*****    Neon    ******/
+    background:var(--underBoxtext-color);                               /*****    Neon    ******/
     border-radius: .5rem;
     border: .1rem solid rgba(0,0,0,.2);
     box-shadow: var(--box-shadow);
@@ -346,7 +359,7 @@ header .icons #menu-bars
 {
     position: absolute;
     top: 1.5rem;
-    background: #eee;
+    background: var(--btn-color);
     border-radius: 50%;
     height: 5rem;
     width: 5rem;
@@ -386,6 +399,7 @@ header .icons #menu-bars
 {
     height:17rem;
     margin: 1rem 0;
+    border-radius: 50%;
 }
 
 .dishes .box-container .box h3
@@ -464,9 +478,9 @@ header .icons #menu-bars
 
 .about .row .content .icons-container .icons
 {
-    background: #eee;
+    background:var(--bg-color);
     border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.2);
+    border: .1rem solid var(--light-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -493,8 +507,8 @@ header .icons #menu-bars
 .review .slide
 {
     padding: 2rem;
-    box-shadow: var(--box-shadow);
-    border: .1rem solid rgba(0,0,0,.2);
+    box-shadow:0rem 0rem 2rem var(--box-shadow);
+    border: .1rem solid var(--light-color);
     border-radius: .5rem;
     position: relative;
 }
@@ -552,7 +566,7 @@ header .icons #menu-bars
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     border: .1rem solid rgba(0,0,0,.2);
-    background: #fff;
+    background: var(--btn-color);
     padding: 1.5rem;
     margin: 0 auto;
 }
@@ -580,7 +594,7 @@ header .icons #menu-bars
 .order form .inputBox .input input,
 .order form .inputBox .input textarea
 {
-    background: var(--dishes-color);
+    background: var(--btn-color);
     border-radius: .5rem;
     padding: 1rem;
     font-size: 1.6rem;
@@ -588,6 +602,8 @@ header .icons #menu-bars
     text-transform: none;
     margin-bottom: 1rem;
     width: 100%;
+    border: .1rem solid var(--black);
+    box-shadow: 0rem 0rem .1rem var(--chamuch);
 }
 
 .order form .inputBox .input input:focus,               /* for changing the color when click  */
@@ -638,6 +654,34 @@ header .icons #menu-bars
 }
 
 
+/************   loader section    ************/
+
+.loader-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img
+{
+    width: 60rem;
+}
+
+.loader-container.fade-out
+{
+    top: 110%;
+    opacity: 0;
+}
+
 
 
 
@@ -672,7 +716,8 @@ header .icons #menu-bars
 
 }
 
-@media (max-width:768px)
+
+@media (max-width:843px)
 {
     header .icons #menu-bars
     {
@@ -710,7 +755,7 @@ header .icons #menu-bars
 
 }
 
-@media (max-width:475px)
+@media (max-width:480px)
 {
     header .dot-open #dot
     {

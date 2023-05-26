@@ -6,6 +6,13 @@ darkModeIcon.onclick = () => {
     document.body.classList.toggle('dark-mode');
 };
 
+// neon
+let neonModeIcon = document.querySelector('#neon');
+
+neonModeIcon.onclick = () => {
+    neonModeIcon.classList.toggle('bx-happy-heart-eyes');
+    document.body.classList.toggle('neon-mode');
+};
 
 //menu bar
 let menu = document.querySelector('#menu-bars');
@@ -75,6 +82,20 @@ var swiper = new Swiper(".review-slider", {
     },
     loop:true,
   });  
+
+
+//*********** */   loader section designing   ***************
+function loader()
+{
+    document.querySelector('.loader-container').classList.add('fade-out');
+}
+
+function fadeOut()
+{
+    setInterval(loader, 1000);
+}
+
+window.onload = fadeOut;
 
 
 
