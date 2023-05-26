@@ -54,7 +54,7 @@ var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
-      delay: 750,
+      delay: 6000,
       disableOnInteraction: false,
     },
     loop:true,
