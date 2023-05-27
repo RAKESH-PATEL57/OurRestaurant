@@ -53,9 +53,14 @@ html
     --bg-color:black;
     --black:#fff;
     --light-color:#e4e1e1;
-    --btn-color:#000000;
     --dots-color:#ffffff;
     --evenPages-color:black;
+
+    --btnboxhover-color:rgb(0, 13, 255);
+    --btn-color:#000000;
+
+    --underBoxtext-color:#000000;
+    --dishesborder-color:#fff;
 }
 
 .neon-mode:hover
@@ -63,7 +68,6 @@ html
     --bg-color:black;
     --black:#fff;
     --box-shadow:0rem 1rem 5rem #00b3ff;
-    --underBoxtext-color:#000000;
     --logo-color:rgb(255, 255, 255);
     --evenPages-color:black;
     --light-color:#e4e1e1;
@@ -73,7 +77,8 @@ html
     --btn-color:black;
     --btnhover-color:black;
     --btnboxhover-color:rgb(0, 13, 255);
-
+    
+    --underBoxtext-color:#000000;
     --dishesborder-color:#fff;
 
 }
@@ -134,7 +139,6 @@ section:nth-child(even)
     /* letter-spacing: .1rem;           **  for gap between alphabets ** */
     /* border: .1rem solid var(--borderbtn-color); */
     box-shadow: 0rem 0rem 5rem var(--btnboxhover-color);
-    animation: animateBg 10s linear infinite;
 }
 
 header
