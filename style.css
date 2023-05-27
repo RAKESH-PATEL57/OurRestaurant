@@ -37,7 +37,15 @@ html
     --icon-color:black;
     --btn-color:#fff;
     --dots-color:var(--light-color);
+
+    --btnhover-color:var(--chamuch);
+    --borderbtn-color:#fff;
+    --bgbtn-color:#192a56;
+    --btnboxhover-color:white;
+
+    --dishesborder-color:rgba(0,0,0,.2);
     --dishes-color:#eee;
+
 }
 
 .dark-mode:hover
@@ -54,12 +62,28 @@ html
 {
     --bg-color:black;
     --black:#fff;
-    --box-shadow:0rem 0rem 10rem #00b3ff;
+    --box-shadow:0rem 1rem 5rem #00b3ff;
     --underBoxtext-color:#000000;
     --logo-color:rgb(255, 255, 255);
-    --btn-color:black;
     --evenPages-color:black;
     --light-color:#e4e1e1;
+    --borderbtn-color:#fff;
+    --bgbtn-color:#000000;
+    
+    --btn-color:black;
+    --btnhover-color:black;
+    --btnboxhover-color:rgb(0, 13, 255);
+
+    --dishesborder-color:#fff;
+
+}
+
+@keyframes animateBg
+{
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
 }
 
 
@@ -93,20 +117,24 @@ section:nth-child(even)
 .btn
 {
     margin-top: 1rem;
+    margin-left: 3rem;
     display: inline-block;
     font-size: 1.7rem;
-    color: var(--btn-color);
-    background: var(--black);
+    color: var(--borderbtn-color);
+    background: var(--bgbtn-color);
     border-radius: .5rem;
     cursor: pointer;
     padding: .8rem 3rem;
-    border: .1rem solid var(--btn-color);
+    border: .1rem solid var(--borderbtn-color);
 }
 
 .btn:hover
 {
-    background: var(--chamuch);
+    /* background: var(--btnhover-color); */
     /* letter-spacing: .1rem;           **  for gap between alphabets ** */
+    /* border: .1rem solid var(--borderbtn-color); */
+    box-shadow: 0rem 0rem 5rem var(--btnboxhover-color);
+    animation: animateBg 10s linear infinite;
 }
 
 header
@@ -347,7 +375,7 @@ header .icons #menu-bars
     padding: 2.5rem;
     background:var(--underBoxtext-color);                               /*****    Neon    ******/
     border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0,.2);
+    border: .1rem solid var(--dishesborder-color);
     box-shadow: var(--box-shadow);
     position: relative;
     overflow: hidden;
@@ -641,6 +669,7 @@ header .icons #menu-bars
 
 .footer .box-container .box a
 {
+    text-transform: none;
     display: block;
     padding: .5rem 0;
     font-size: 1.5rem;
