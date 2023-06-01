@@ -38,6 +38,9 @@ html
     --btn-color:#fff;
     --dots-color:var(--light-color);
 
+    --modicon-color:rgb(0, 0, 0);
+    --modbg-color:transparent;
+
     --btnhover-color:var(--chamuch);
     --borderbtn-color:#fff;
     --bgbtn-color:#192a56;
@@ -56,6 +59,9 @@ html
     --dots-color:#ffffff;
     --evenPages-color:black;
 
+    --modicon-color:rgb(255, 253, 253);
+    --modbg-color:#000000;
+
     --btnboxhover-color:rgb(0, 13, 255);
     --btn-color:#000000;
 
@@ -65,6 +71,7 @@ html
 
 .neon-mode:hover
 {
+    
     --bg-color:black;
     --black:#fff;
     --box-shadow:0rem 1rem 5rem #00b3ff;
@@ -73,6 +80,10 @@ html
     --light-color:#e4e1e1;
     --borderbtn-color:#fff;
     --bgbtn-color:#000000;
+
+    --modicon-color:rgb(255, 253, 253);
+    --modbg-color:#000000;
+    
     
     --btn-color:black;
     --btnhover-color:black;
@@ -119,6 +130,46 @@ section:nth-child(even)
     text-transform: uppercase;
 }
 
+/********    mode designing   *********/
+
+header .dot-open
+{
+    margin-right: -27rem;
+}
+
+header .mode
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100%;
+    left: 10;
+    right: 0;
+    background: transparent;
+    border-bottom:.1rem solid rgba(0,0,0,.2);
+    border-left:.1rem solid rgba(0,0,0,.2);
+    border-right:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0rem 0rem 1rem #ffffff;
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .mode i
+{
+    margin-right: 15rem;
+    font-size: 1.5rem;
+    margin-top: .3rem;
+    color: var(--modicon-color);
+}
+
+header .mode.dot
+{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    backdrop-filter: blur(1rem);
+    background-color: var(--modbg-color);
+}
+
 .btn
 {
     margin-top: 1rem;
@@ -135,7 +186,7 @@ section:nth-child(even)
 
 .btn:hover
 {
-    /* background: var(--btnhover-color); */
+    background: var(--btnhover-color);
     /* letter-spacing: .1rem;           **  for gap between alphabets ** */
     /* border: .1rem solid var(--borderbtn-color); */
     box-shadow: 0rem 0rem 5rem var(--btnboxhover-color);
@@ -234,14 +285,6 @@ header .dot-open i:hover
 header .icons #menu-bars
 {
     display:none;
-}
-
-#dot
-{
-    /* position: absolute;
-    margin-left: 3rem;
-    margin-top: -22px; */
-    display: none;
 }
 
 #search-form
@@ -702,6 +745,7 @@ header .icons #menu-bars
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    color: #00b3ff;
 }
 
 .loader-container img
