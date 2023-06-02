@@ -42,6 +42,12 @@ section
     backdrop-filter:blur(15px);
 }
 
+ a i 
+ {
+    color: #fff;
+    font-size: 1.5rem;
+ }
+
 h2{
     font-size: 2em;
     color: #fff;
