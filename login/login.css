@@ -1,173 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;400&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login/login.css">
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
-}
 
-section
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: url('https://pixabay.com/get/gd9f2ab7accafb2a7ac80c76e19d75565a28a296ac66154bfc28424709bbec87545bd8aa83aba2037885fdc64ab3309aee00fb87a6981c9442e577b720382b6f8_1920.jpg');
-    background-size: cover;
-    background-position: center;
-    /* animation: animateBg 5s linear infinite; */
-}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-@keyframes animateBg
-{
-    100%
-    {
-        filter: hue-rotate(360deg);
-    }
-}
 
-.login-box
-{
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter:blur(15px);
-}
+</head>
 
- a i 
- {
-    color: #fff;
-    font-size: 1.5rem;
- }
+<body>
+          <section>         
+                <div class="login-box">
+                    <form action="">
+                        <a href="/index.html"><i class='bx bx-arrow-back'></i></a>
+                        <h2>Login</h2>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
 
-h2{
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
-}
+                        <div class="remember-forgot">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="/login/test.html">Forgot Password</a>
+                        </div>
 
-.input-box
-{
-    position: relative;
-    width: 310px;
-    margin: 30px 0;
-    border-bottom: 2px solid #fff;
-}
+                        <button type="submit">Login</button>
+                        
+                        <div class="register-link">
+                                <p>Don't have an account<a href="/signin/SignIn.html"><br><u>Register</u></a></p>
+                        </div>
 
-.input-box label
-{
-    position:absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
-}
+                    </form>
+                </div>
+            </section>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-.input-box input:focus~label,          /*emil and password upar jaayegaa jab password yaa email likhne waale mein click karoge */
-.input-box input:valid~label
-{
-    top: -5px;
-}
-
-.input-box input
-{
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #fff;
-    padding: 0 35px 0 5px;
-}
-
-.input-box .icon
-{
-    position: absolute;
-    right:8px;
-    color: #fff;
-    font-size: 1.2em;
-    line-height: 57px;
-}
-
-.remember-forgot
-{
-    margin: -15px 0 15px;
-    font-size: .9em;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-}
-
-.remember-forgot label input
-{
-    margin-right: 3px;
-}
-
-.remember-forgot a
-{
-    color: #fff;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover
-{
-    text-decoration: underline;
-}
-
-button
-{
-    width: 100%;
-    height: 40px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #000;
-    font-weight: 500;
-}
-
-.register-link
-{
-    font-size: .9em;
-    color: #fff;
-    text-align: center;
-    margin: 25px 0 10px; 
-}
-
-.register-link p a
-{
-    color: #fff; 
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.register-link p a:hover
-{
-    text-decoration: underline;
-}
-
-@media (max-width: 360px)
-{
-    .login-box
-    {
-        width: 100%;
-        height: 100vh;
-        border: none;
-        border-radius: 0;
-    }
-
-}
+</body>
+</html>
