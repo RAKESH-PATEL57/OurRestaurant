@@ -778,6 +778,33 @@ header .icons #menu-bars
 
 /************    Making website Responsive  *********** */
 
+/**********      mode icon     ***********/
+@media(max-width:1500px)
+{
+    header .dot-open
+    {
+        margin-right: -25rem;
+    }
+}
+
+@media(max-width:1460px)
+{
+    header .dot-open
+    {
+        margin-right: -20rem;
+    }
+}
+
+@media(max-width:1337px)
+{
+    header .dot-open
+    {
+        margin-right: -18rem;
+    }
+}
+
+
+
 @media (max-width:1095px)
 {
     html
