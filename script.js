@@ -100,24 +100,12 @@ window.onload = fadeOut;
 
 
 
-
-
-
-
-
 //dot
 let dot = document.querySelector('#dot');
-let mode = document.querySelector('.mode');
+let icons = document.querySelector('.icons');
 
 dot.onclick = () =>
 {
     dot.classList.toggle('bx-dots-vertical-rounded');
-    mode.classList.toggle('dot');
+    icons.classList.toggle('dot');
 }
-
-window.onscroll = () =>
-{
-    dot.classList.remove('bx-dots-vertical-rounded');
-    mode.classList.remove('dot');
-}
-
