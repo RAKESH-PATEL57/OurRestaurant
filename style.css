@@ -48,7 +48,7 @@ html
 
 }
 
-.dark-mode:hover
+.dark-mode
 {
     --bg-color:black;
     --black:#fff;
@@ -63,7 +63,7 @@ html
     --dishesborder-color:#fff;
 }
 
-.neon-mode:hover
+.neon-mode
 {
     --bg-color:black;
     --black:#fff;
