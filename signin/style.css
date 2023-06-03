@@ -25,19 +25,19 @@ section
     /* animation: animateBg 60s linear infinite; */
 }
 
-@keyframes animateBg
+/* @keyframes animateBg
 {
     100%
     {
         filter: hue-rotate(360deg);
     }
-}
+} */
 
 .SignIn-box
 {
     position: relative;
     width: 400px;
-    height: 450px;
+    height: 480px;
     background: transparent;
     border: 2px solid #fff;
     box-shadow:0rem 0rem 2rem #ff00ff;
@@ -47,6 +47,13 @@ section
     align-items: center;
     backdrop-filter:blur(15px);
 }
+
+a i 
+ {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+ }
 
 h2{
     font-size: 2em;

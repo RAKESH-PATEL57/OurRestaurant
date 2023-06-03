@@ -46,7 +46,7 @@ var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 5000,
+      delay: 1000000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -61,7 +61,7 @@ var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
-      delay: 6000,
+      delay: 600000,
       disableOnInteraction: false,
     },
     loop:true,
@@ -107,17 +107,10 @@ window.onload = fadeOut;
 
 //dot
 let dot = document.querySelector('#dot');
-let mode = document.querySelector('.mode');
+let icons = document.querySelector('.icons');
 
 dot.onclick = () =>
 {
     dot.classList.toggle('bx-dots-vertical-rounded');
-    mode.classList.toggle('dot');
+    icons.classList.toggle('dot');
 }
-
-window.onscroll = () =>
-{
-    dot.classList.remove('bx-dots-vertical-rounded');
-    mode.classList.remove('dot');
-}
-
