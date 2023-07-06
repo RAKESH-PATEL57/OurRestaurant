@@ -48,9 +48,10 @@ html
 
 }
 
-.dark-mode:hover
+.dark-mode
 {
     --bg-color:black;
+    --logo-color:rgb(255, 255, 255);
     --black:#fff;
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
@@ -63,7 +64,7 @@ html
     --dishesborder-color:#fff;
 }
 
-.neon-mode:hover
+.neon-mode
 {
     --bg-color:black;
     --black:#fff;
@@ -220,14 +221,13 @@ header .dot-open i
     font-size: 1.7rem;
     color: var(--black);
     border-radius: 50%;
-    background: #eee;
+    color:var(--underBoxtext-color);
+    background: var(--chamuch);
+    box-shadow:0px 0px 20px var(--chamuch);
 }
 
 header .dot-open i:hover
 {
-    color:var(--underBoxtext-color);
-    background: var(--chamuch);
-    box-shadow:0px 0px 20px var(--chamuch);
     transform: rotate(360deg);
 }
 
@@ -309,6 +309,10 @@ header .icons #menu-bars
     font-size: 5rem;
 }
 
+.home
+{
+    height: 100vh;
+}
 
 .home .home-slider .slide
 {
