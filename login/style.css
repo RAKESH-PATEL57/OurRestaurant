@@ -14,7 +14,8 @@ section
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url('https://pixabay.com/get/gd9f2ab7accafb2a7ac80c76e19d75565a28a296ac66154bfc28424709bbec87545bd8aa83aba2037885fdc64ab3309aee00fb87a6981c9442e577b720382b6f8_1920.jpg');
+    /* background: url('https://pixabay.com/get/gd9f2ab7accafb2a7ac80c76e19d75565a28a296ac66154bfc28424709bbec87545bd8aa83aba2037885fdc64ab3309aee00fb87a6981c9442e577b720382b6f8_1920.jpg'); */
+    background: url(/images/login.jpg);
     background-size: cover;
     background-position: center;
     /* animation: animateBg 5s linear infinite; */
