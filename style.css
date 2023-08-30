@@ -48,9 +48,10 @@ html
 
 }
 
-.dark-mode:hover
+.dark-mode
 {
     --bg-color:black;
+    --logo-color:rgb(255, 255, 255);
     --black:#fff;
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
@@ -63,7 +64,7 @@ html
     --dishesborder-color:#fff;
 }
 
-.neon-mode:hover
+.neon-mode
 {
     --bg-color:black;
     --black:#fff;
@@ -220,14 +221,13 @@ header .dot-open i
     font-size: 1.7rem;
     color: var(--black);
     border-radius: 50%;
-    background: #eee;
+    color:var(--underBoxtext-color);
+    background: var(--chamuch);
+    box-shadow:0px 0px 20px var(--chamuch);
 }
 
 header .dot-open i:hover
 {
-    color:var(--underBoxtext-color);
-    background: var(--chamuch);
-    box-shadow:0px 0px 20px var(--chamuch);
     transform: rotate(360deg);
 }
 
@@ -235,6 +235,72 @@ header .icons #menu-bars
 {
     display:none;
 }
+
+
+/**************   Log In and Sign in section  Start   ****************/
+.form-popup
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.form-popup .form-box
+{
+    display: flex;
+}
+
+.form-box .form-details
+{
+    max-width: 330px;
+}
+
+.form-box h2
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-box .form-content
+{
+    width: 100%;
+    padding: 35px;
+}
+
+form .input-field
+{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form .input-field input
+{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    border-radius: 3px;
+    border: 1px solid #717171;
+}
+
+form .input-field label 
+{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #717171;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+/**************   Log In and Sign in section  End   ****************/
 
 #dot
 {
@@ -309,6 +375,10 @@ header .icons #menu-bars
     font-size: 5rem;
 }
 
+.home
+{
+    height: 100vh;
+}
 
 .home .home-slider .slide
 {
