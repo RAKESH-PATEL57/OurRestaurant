@@ -26,7 +26,7 @@ html
 
 :root
 {
-    --chamuch: #f25b0a;
+    --alpha-color: #00b3ff;
     --black:#192a56;
     --light-color:#666;
     --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
@@ -38,13 +38,16 @@ html
     --btn-color:#fff;
     --dots-color:var(--light-color);
 
-    --btnhover-color:var(--chamuch);
+    --btnhover-color:var(--alpha-color);
     --borderbtn-color:#fff;
     --bgbtn-color:#192a56;
     --btnboxhover-color:white;
 
     --dishesborder-color:rgba(0,0,0,.2);
     --dishes-color:#eee;
+
+    /****  login and sign-up section colors  *****/
+    --login-main-color: #fff;
 
 }
 
@@ -106,7 +109,7 @@ section:nth-child(even)
 .sub-heading                       /*  for dishes section   */
 {
     text-align: center;
-    color: var(--chamuch);
+    color: var(--alpha-color);
     font-size: 2rem;
     padding-top: 1rem;
 }
@@ -166,7 +169,7 @@ header .logo
 
 header .logo i
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 header .navbar a
@@ -180,7 +183,7 @@ header .navbar a
 header .navbar a:hover, header .navbar a.active
 {
     color: #fff;
-    background: var(--chamuch);
+    background: var(--alpha-color);
 }
 
 header .icons i, header .icons a
@@ -206,8 +209,8 @@ header .icons i, header .icons a
 header .icons i:hover, header .icons a:hover
 {
     color:var(--underBoxtext-color);
-    background: var(--chamuch);
-    box-shadow:0px 0px 20px var(--chamuch);
+    background: linear-gradient(#00fbff,#00fbff,red);
+    box-shadow:0px 0px 20px var(--alpha-color);
     transform: rotate(360deg);
 }
 
@@ -222,8 +225,8 @@ header .dot-open i
     color: var(--black);
     border-radius: 50%;
     color:var(--underBoxtext-color);
-    background: var(--chamuch);
-    box-shadow:0px 0px 20px var(--chamuch);
+    background: var(--alpha-color);
+    box-shadow:0px 0px 20px var(--alpha-color);
 }
 
 header .dot-open i:hover
@@ -243,19 +246,30 @@ header .icons #menu-bars
     position: fixed;
     top: 50%;
     left: 50%;
-    max-width: 720px;
+    max-width: 400px;
     height: 30rem;
     width: 100%;
-    background: #fff;
     border: 2px solid aqua;
     transform: translate(-50%, -50%);
-    z-index: 5;
+    z-index: 2;
+    border-radius: 1rem;
+    color: var(--login-main-color);
+    overflow: hidden;
+}
+
+.form-popup img
+{
+    position: absolute;
+    z-index: -2;
+    height: 30rem;
+    filter: blur(2px);
 }
 
 .form-content h2
 {
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 /* .form-content form
@@ -270,23 +284,36 @@ header .icons #menu-bars
     flex-direction: column;
 }
 
+.login a
+{
+    color: var(--alpha-color);
+}
+
 .input-field
 {
     border: 2px solid red;
+    margin-top: .3rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+label
+{
+    font-size: 1.5rem;
+    margin-left: 2rem;
 }
 
 .input-field input
 {
     border:2px solid black;
-    margin-left: 2rem;
+    margin-right: 5rem;
+    width: 25rem;
 }
-/**************   Log In and Sign in section  End   ****************/
+/**************   Log-In and Sign-In section  End   ****************/
 
 #dot
 {
-    /* position: absolute;
-    margin-left: 3rem;
-    margin-top: -22px; */
     display: none;
 }
 
@@ -342,7 +369,7 @@ header .icons #menu-bars
 
 #search-form label:hover
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 #search-form #close
@@ -387,7 +414,7 @@ header .icons #menu-bars
 
 .home .home-slider .slide .content span
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
     font-size: 2.5rem;
 }
 
@@ -412,7 +439,7 @@ header .icons #menu-bars
 
 .swiper-pagination-bullet-active
 {
-    background: var(--chamuch);
+    background: var(--alpha-color);
 }
 
 /********** Dishes Section **********/
@@ -453,7 +480,7 @@ header .icons #menu-bars
 .dishes .box-container .box .fa-heart:hover,
 .dishes .box-container .box .fa-eye:hover
 {
-    background: var(--chamuch);
+    background: var(--alpha-color);
     color: var(--underBoxtext-color);
 }
 
@@ -498,12 +525,12 @@ header .icons #menu-bars
 .dishes .box-container .box .stars i
 {
     font-size: 1.7rem;
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 .dishes .box-container .box span
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
     font-weight: bolder;
     margin-right: 1rem;
     font-size: 2.5rem;
@@ -574,7 +601,7 @@ header .icons #menu-bars
 .about .row .content .icons-container .icons i
 {
     font-size: 2.5rem;
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 .about .row .content .icons-container .icons span
@@ -630,7 +657,7 @@ header .icons #menu-bars
 .review .slide .user i
 {
     font-size: 1.3rem;
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 .review .slide p
@@ -685,13 +712,13 @@ header .icons #menu-bars
     margin-bottom: 1rem;
     width: 100%;
     border: .1rem solid var(--black);
-    box-shadow: 0rem 0rem .1rem var(--chamuch);
+    box-shadow: 0rem 0rem .1rem var(--alpha-color);
 }
 
 .order form .inputBox .input input:focus,               /* for changing the color when click  */
 .order form .inputBox .input textarea:focus
 {
-    border: .1rem solid var(--chamuch);
+    border: .1rem solid var(--alpha-color);
 }
 
 .order form .inputBox .input textarea
@@ -732,7 +759,7 @@ header .icons #menu-bars
 
 .footer .box-container .box a:hover
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
     text-decoration: underline;
 }
 
