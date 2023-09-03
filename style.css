@@ -26,7 +26,7 @@ html
 
 :root
 {
-    --alpha-color: #00b3ff;
+    --alpha-color: #06aed5;
     --black:#192a56;
     --light-color:#666;
     --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
@@ -167,11 +167,6 @@ header .logo
     font-weight: bolder;
 }
 
-header .logo i
-{
-    color: var(--alpha-color);
-}
-
 header .navbar a
 {
     font-size: 1.7rem;
@@ -209,8 +204,9 @@ header .icons i, header .icons a
 header .icons i:hover, header .icons a:hover
 {
     color:var(--underBoxtext-color);
-    background: linear-gradient(#00fbff,#00fbff,red);
-    box-shadow:0px 0px 20px var(--alpha-color);
+    background: var(--alpha-color);
+    box-shadow:0px 0px 20px var(--alpha-color),
+               0px 0px 30px var(--alpha-color);
     transform: rotate(360deg);
 }
 
