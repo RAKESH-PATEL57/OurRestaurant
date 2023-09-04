@@ -251,6 +251,10 @@ header .icons #menu-bars
     border-radius: 1rem;
     color: var(--login-main-color);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #191818;
 }
 
 .form-popup img
@@ -261,51 +265,74 @@ header .icons #menu-bars
     filter: blur(2px);
 }
 
-.form-content h2
+.form-popup h2
 {
+    color: var(--login-main-color);
+    -webkit-text-stroke: rgb(0, 0, 0) .1px;
+    text-shadow: 0px 0px .5rem var(--alpha-color),
+                 0px 0px .8rem var(--alpha-color),
+                 0px 0px 1rem var(--alpha-color),
+                 0px 0px 1.5rem var(--alpha-color);
+    font-size: 2rem;
+    margin-top: .5rem;
+    width: 100%;
+    height: 6rem;
+    border-bottom: .3rem solid var(--alpha-color);
+    scrollbar-darkshadow-color: #00b3ff;
     display: flex;
     justify-content: center;
-    z-index: 2;
+    align-items: center;
+
 }
 
-/* .form-content form
+.form-popup .form-content
 {
     display: flex;
     flex-direction: column;
-} */
+    justify-content: center;
+    align-items: center;
+    min-height: 10rem;
+}
 
-.login
+.log-in
 {
     display: flex;
     flex-direction: column;
+    border: 2px solid red;
+    padding: 1rem;
 }
 
-.login a
+
+.log-in label
 {
-    color: var(--alpha-color);
+    font-size: 1.8rem;
 }
 
-.input-field
+
+.log-in .input-field
 {
     border: 2px solid red;
-    margin-top: .3rem;
+    margin-bottom: 2rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-label
-{
-    font-size: 1.5rem;
-    margin-left: 2rem;
-}
-
 .input-field input
 {
     border:2px solid black;
-    margin-right: 5rem;
+    margin-left: 3.5rem;
     width: 25rem;
+    font-size: 1.5rem;
 }
+
+.log-in a
+{
+    color: var(--alpha-color);
+}
+
+
+
 /**************   Log-In and Sign-In section  End   ****************/
 
 #dot
