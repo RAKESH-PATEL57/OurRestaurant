@@ -47,9 +47,13 @@ html
     --dishes-color:#eee;
 
     /****  login and sign-up section colors  *****/
-    --login-main-color: #fff;
-    --login-bg-color:black;
-    --login-font-color:#fff;
+    --login-main-color: #000000;
+    --login-bg-color:rgb(67, 168, 185);
+    --login-font-color:#000000;
+    --login-btn-hover-Color:#fff;
+    --login-sign_up:#ff0000;
+    --login-hover-color:#ff00dd;
+    --forget-password-color:#ff0000;
 
 }
 
@@ -86,6 +90,13 @@ html
     
     --underBoxtext-color:#000000;
     --dishesborder-color:#fff;
+
+     /****  login and sign-up section colors  *****/
+     --login-main-color: #fff;
+     --login-bg-color:black;
+     --login-font-color:#fff;
+     --login-sign_up:#00ffee;
+     --login-hover-color:#ff00dd;
 
 }
 
@@ -348,29 +359,51 @@ header .icons #menu-bars
     color: var(--login-font-color);
 }
 
-.log-in a
+.log-in .forgot-password
 {
-    color: var(--alpha-color);
+    color: var(--forget-password-color);
     font-size: 1.4rem;
+    font-weight: 700;
 }
 
-button
+.forgot-password:hover
 {
-    width: 8rem;
+    color: var(--login-hover-color);
+}
+
+.log-btn
+{
+    width: 9rem;
     border-radius: 1rem;
     cursor: pointer;
     padding: .6rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     background: var(--login-bg-color);
     border: 2px solid var(--alpha-color);
     color: var(--login-font-color);
 }
 
-button:hover
+.log-btn:hover
 {
-    background: var(--alpha-color);
+    background: var(--login-btn-hover-Color);
 }
 
+.bottom-link
+{
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.bottom-link .sign-Up
+{
+    color: var(--login-sign_up);
+    font-weight: 700;
+}
+
+.sign-Up:hover
+{
+    color: var(--login-hover-color);
+}
 
 
 /**************   Log-In and Sign-In section  End   ****************/
