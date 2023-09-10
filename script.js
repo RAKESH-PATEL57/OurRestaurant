@@ -1,13 +1,16 @@
 // dark mode light
 let darkModeIcon = document.querySelector('#darkMode-icon');
-
 darkModeIcon.onclick = () => {
+    
     darkModeIcon.classList.toggle('bx-sun');
+    
     document.body.classList.toggle('dark-mode');
+    
+    
 };
 
 // neon
-let neonModeIcon = document.querySelector('#neon');
+let neonModeIcon = document.querySelector('#neon-icon');
 
 neonModeIcon.onclick = () => {
     neonModeIcon.classList.toggle('bx-happy-heart-eyes');
@@ -46,7 +49,7 @@ var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 5000,
+      delay: 1000000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -61,7 +64,7 @@ var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
-      delay: 6000,
+      delay: 600000,
       disableOnInteraction: false,
     },
     loop:true,
@@ -100,6 +103,11 @@ window.onload = fadeOut;
 
 
 
+
+
+
+
+
 //dot
 let dot = document.querySelector('#dot');
 let icons = document.querySelector('.icons');
@@ -109,3 +117,14 @@ dot.onclick = () =>
     dot.classList.toggle('bx-dots-vertical-rounded');
     icons.classList.toggle('dot');
 }
+
+
+//****** */ log-in and sign-in section *********************
+const formOpenBtn = document.querySelector("#form-Open");
+const formPopUp = document.querySelector(".form-popup");
+const formCloseButton = document.querySelector("#close_Btn");
+const logInBtn = document.querySelector("#Log-in-Btn");
+const signInBtn = document.querySelector("#Sign-In-Btn");
+
+formOpenBtn.addEventListener("click", () => formPopUp.classList.add("show"));
+formCloseButton.addEventListener("click", () => formPopUp.classList.remove("show"));
