@@ -29,11 +29,12 @@ html
     --alpha-color: #dd7230;
     --black:#192a56;
     --light-color:#666;
+    --navbaar-font-color:#000000;
     --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
     --underBoxtext-color:#fff;
     --bg-color:#fff;
     --logo-color:black;
-    --bg-navbar:#666;
+    --bg-navbar:#000000;
     --icon-color:black;
     --btn-color:#fff;
     --dots-color:var(--light-color);
@@ -48,10 +49,10 @@ html
 
     /****  login and sign-up section colors  *****/
     --login-main-color: #000000;
-    --login-bg-color:#000000;
-    --login-font-color:#ffffff;
+    --login-bg-color:#ffffff;
+    --login-font-color:#000000;
     --login-btn-hover-Color:#fff;
-    --login-sign_up:#ff0000;
+    --login-sign_up:#000000;
     --login-hover-color:#ff00dd;
     --forget-password-color:#ff0000;
 
@@ -65,19 +66,29 @@ html
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
     --evenPages-color:black;
-
-    --btnboxhover-color:rgb(0, 13, 255);
+    --navbaar-font-color:#fff;
+    --btnboxhover-color:var(--alpha-color);
     --btn-color:#000000;
 
     --underBoxtext-color:#000000;
     --dishesborder-color:#fff;
+
+      /****  login and sign-up section colors  *****/
+    --login-bg-color:#000000;
+    --login_signin-shadow-color:var(--alpha-color);
+    --login-font-color:#ffffff;
+    --login-sign_up:#ff0000;
+    --login-hover-color:#ff00dd;
+    --forget-password-color:#ff0000;
 }
 
 .neon-mode
 {
     --alphaneon-color: #dd7230;
+    --navbaar-font-color:#fff;
     --bg-color:black;
     --black:#fff;
+    --btnboxhover-color:var(--alpha-color);
     --box-shadow:0rem .5rem 2rem var(--alpha-color);
     --logo-color:rgb(255, 255, 255);
     --evenPages-color:black;
@@ -87,7 +98,6 @@ html
     
     --btn-color:black;
     --btnhover-color:black;
-    --btnboxhover-color:rgb(0, 13, 255);
     
     --underBoxtext-color:#000000;
     --dishesborder-color:#fff;
@@ -95,9 +105,11 @@ html
      /****  login and sign-up section colors  *****/
      --login-main-color: #000000;
      --login-bg-color:black;
+     --login_signin-shadow-color:var(--alpha-color);
      --login-font-color:#fff;
      --login-sign_up:#00ffee;
      --login-hover-color:#ff00dd;
+    --forget-password-color:#ff0000;
 
 }
 
@@ -153,9 +165,6 @@ section:nth-child(even)
 
 .btn:hover
 {
-    /* background: var(--btnhover-color); */
-    /* letter-spacing: .1rem;           **  for gap between alphabets ** */
-    /* border: .1rem solid var(--borderbtn-color); */
     box-shadow: 0rem 0rem 5rem var(--btnboxhover-color);
 }
 
@@ -186,7 +195,7 @@ header .navbar a
     font-size: 1.7rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
-    color: var(--bg-navbar);
+    color: var(--navbaar-font-color);
 }
 
 header .navbar a:hover, header .navbar a.active
@@ -280,20 +289,34 @@ header .icons #menu-bars
     align-items: center;
     background: var(--login-bg-color);
     padding: 2rem;
-    /* opacity: 0; */
-}
-.form-popup #close_Icon
-{
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    transform:translate(-50%, -50%) scale(1.2);
 }
 
 .form-popup.show
 {
     opacity: 1;
+    pointer-events:auto;
+    transform:translate(-50%,w -50%) scale(1);
+    z-index: 1000;
 }
+
+.form-popup #close_Btn
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.form-popup #close_Btn:hover
+{
+    color: var(--alpha-color);
+    font-size: 4rem;
+}
+
 
 /* .form-popup img
 {
@@ -307,18 +330,18 @@ header .icons #menu-bars
 {
     color: var(--login-font-color);
     -webkit-text-stroke: rgb(0, 0, 0) .1px;
-    text-shadow: 0px 0px .5rem var(--alpha-color),
-                 0px 0px .8rem var(--alpha-color),
-                 0px 0px 1rem var(--alpha-color),
-                 0px 0px 1.5rem var(--alpha-color);
+    text-shadow: 0px 0px .5rem var(--login_signin-shadow-color),
+                 0px 0px .8rem var(--login_signin-shadow-color),
+                 0px 0px 1rem var(--login_signin-shadow-color),
+                 0px 0px 1.5rem var(--login_signin-shadow-color);
     font-size: 2rem;
     width: 100%;
-    /* height: 6rem; */
     padding: .5rem;
     border-bottom: .3rem solid var(--alpha-color);
     display: flex;
     justify-content: center;
     align-items: center;
+
 
 }
 
