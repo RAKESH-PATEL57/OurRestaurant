@@ -51,6 +51,7 @@ html
     --login-main-color: #000000;
     --login-bg-color:#ffffff;
     --login-font-color:#000000;
+    --close-btn-login-signin:#00aaff;
     --login-btn-hover-Color:#fff;
     --login-sign_up:#000000;
     --login-hover-color:#ff00dd;
@@ -298,7 +299,7 @@ header .icons #menu-bars
 {
     opacity: 1;
     pointer-events:auto;
-    transform:translate(-50%,w -50%) scale(1);
+    transform:translate(-50%,-50%) scale(1);
     z-index: 1000;
 }
 
@@ -313,7 +314,7 @@ header .icons #menu-bars
 
 .form-popup #close_Btn:hover
 {
-    color: var(--alpha-color);
+    color: var(--close-btn-login-signin);
     font-size: 4rem;
 }
 
