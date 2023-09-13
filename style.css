@@ -303,6 +303,15 @@ header .icons #menu-bars
     z-index: 1000;
 }
 
+.form-popup.active #SIGN-UP
+{
+     display: block;
+}
+.form-popup.active #LOG-IN
+{
+     display: none;
+}
+
 .form-popup #close_Btn
 {
     position: fixed;
