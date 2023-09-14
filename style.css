@@ -633,6 +633,15 @@ header .icons #menu-bars
 {
     width: 100%;
     border-radius: 50%;
+    /* border-bottom-right-radius: -850%;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-width: .5px;
+    border-bottom: 2px solid rgb(0, 247, 255);
+    box-shadow: 0px 2px 10px var(--alpha-color); */
+    /* filter: drop-shadow( 0px 2px 10px var(--alpha-color)); */
+    border: 2px solid var(--alpha-color);
 }
 
 .home .home-slider .slide .content span
@@ -664,6 +673,8 @@ header .icons #menu-bars
 {
     background: var(--alpha-color);
 }
+
+
 
 /********** Dishes Section **********/
 
