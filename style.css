@@ -262,7 +262,8 @@ header .icons #menu-bars
 
 /**************   Log In and Sign in section  Start   ****************/
 .login-btn
-{   width: 9rem;
+{   
+    width: 9rem;
     border-radius: 1rem;
     cursor: pointer;
     padding: .6rem;
@@ -464,6 +465,15 @@ header .icons #menu-bars
 #SIGN-UP
 {
     display: none;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.bottom-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-link .sign-Up
@@ -483,15 +493,17 @@ header .icons #menu-bars
     flex-direction: column;
     padding: 1rem;
 }
-.sign-in label
+/* .sign-in label
 {
     font-size: 1.8rem;
     color: var(--login-font-color);
-}
+    
+     border: 2px solid red;
+} */
 .sign-in .input-field
 {
     margin-bottom: 2rem;
-    width: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
