@@ -14,12 +14,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <!--****************  For image animation *********** -->
+    <!-- For image animation  -->
    <link
  rel="stylesheet"
  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
-    <!--****************  For icons *********** -->
+    <!--  For icons  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel='stylesheet'>
 
@@ -31,7 +31,7 @@
 
     <header>
        
-        <a href="#" class="logo"><i class='bx bx-restaurant'></i>OurRestaurant</i></a>
+        <a href="#" class="logo">OurRestaurant</a>
    
 
             <nav class="navbar">
@@ -40,7 +40,8 @@
                 <a href="#about">About</a> 
                 <a href="#review">Review</a>
                 <a href="#order">Order</a>
-                <a href="./login.html">LogIn</a>
+                <!-- <a href="./login.html">LogIn</a> -->
+                <!-- <button class="login-btn" id="form-Open">LOG IN</button> -->
             </nav>
             
             <div class="dot-open">
@@ -48,15 +49,68 @@
             </div>
 
             <div class="icons">
+                <button class="login-btn" id="form-Open">LOG IN</button>
                 <i class="bx bx-menu" id="menu-bars"></i>
-                <i class='bx bxs-cool' id="neon"></i>
+                <!-- <i class='bx bxs-cool' id="neon-icon"></i> -->
                 <i class='bx bx-moon' id="darkMode-icon"></i>
-                <a href="#" class='bx bx-heart' id="heart"></a>
-                <a href="#" class='bx bx-cart' id="cart"></a>
                 <i class='bx bx-search' id="search-icon"></i>
-                <!-- <i class="neon">NE</i> -->  
+                <!-- <a href="#" class='bx bx-heart' id="heart"></a> -->
+                <a href="#cart" class='bx bx-cart'>0</a>
             </div>
   </header>
+
+  <!-- login section  -->
+  <div class="form-popup">
+    <i class='bx bx-x' id="close_Btn"></i>
+    <div class="form-content" id="LOG-IN">
+        <h2>LOGIN</h2>
+        <form class="form-elements" action="#">
+            <div class="log-in">
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="text" placeholder="Enter email id" required>
+                </div>
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button class="log-btn" id="Log-in-Btn" type="submit">Log In</button>
+        </form>
+        <div class="bottom-link">
+            Don't have an account?
+            <a class="sign-Up" id="signup"  href="#">Sign Up</a>
+        </div>
+    </div>
+    <div class="form-content" id="SIGN-UP">
+        <h2>SIGN UP</h2>
+        <form class="form-elements" action="#">
+            <div class="sign-in">
+                <div class="input-field">
+                    <!-- <label>Enter your Name</label> -->
+                    <input type="text" placeholder="Enter Your e-mail" required>
+                </div>
+                <div class="input-field">
+                    <!-- <label>Email</label> -->
+                    <input type="text" placeholder="Create your password" required>
+                </div>
+                <div class="input-field">
+                    <!-- <label>Password</label> -->
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <!-- <a href="#" class="forgot-password">Forgot Password?</a> -->
+            </div>
+            <button class="sign-in-btn" id="Sign-In-Btn" type="submit">Sign In</button>
+        </form>
+        <div class="bottom-link">
+            Already have an account?
+            <a class="sign-Up" id="login" href="#">Log-In</a>
+        </div>
+    </div>
+  </div>
+
+  
 
   <!-- search form  -->
 
@@ -66,6 +120,12 @@
         <i class="bx bx-x" id="close"></i>
   </form>
 
+  <section id="cart">
+    <div class="cart-content">
+        
+    </div>
+
+  </section>
 
    <!-- section design -->
     <section class="home" id="home">
@@ -82,13 +142,13 @@
                     </div>
                     
                     <div class="image">
-                        <img src="images/noodle.jpg" alt="">
+                        <img src="./images/noodle.png" alt="">
                     </div>
                 
                 </div>
 
                 <div class="swiper-slide slide">
-                    <div class="content">
+                    <div class="content" id="chicken">
                         <span>Our Special Dish</span>
                         <h3>fried chicken</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p>
@@ -96,12 +156,12 @@
                     </div>
                     
                     <div class="image">
-                        <img src="images/chicken.jpg" alt="">
+                        <img src="./images/chicken.png" alt="">
                     </div>
                 
                 </div>
 
-                <div class="swiper-slide slide">
+                <div class="swiper-slide slide" id="hot_pizaa">
                     <div class="content">
                         <span>Our Special Dish</span>
                         <h3>hot pizza</h3>
@@ -110,7 +170,7 @@
                     </div>
                     
                     <div class="image">
-                        <img src="images/pizaa.jpg" alt="">
+                        <img src="./images/pizaa.png" alt="">
                     </div>                
                 </div>
 
@@ -123,7 +183,7 @@
     </section>
 
 
-    <!--*********   Dishes Section    **********-->
+    <!--  Dishes Section    -->
     <section>
 
         <div class="dishes" id="dishes">
@@ -134,8 +194,8 @@
             <div class="box-container">
                 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes1.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -150,8 +210,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes2.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -166,8 +226,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes3.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -182,8 +242,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes4.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -198,8 +258,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes5.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -214,8 +274,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes6.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -230,8 +290,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes7.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -246,8 +306,8 @@
                 </div>
 
                 <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <!-- <a href="#" class="fas fa-heart"></a> -->
+                    <!-- <a href="#" class="fas fa-eye"></a> -->
                     <img src="images/dishes8.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -268,7 +328,7 @@
     </section>
 
 
-    <!--******************    About section designing     *******************-->
+    <!--   About section designing    -->
 
     <section class="about" id="about">
         <h3 class="sub-heading"> about us </h3>
@@ -307,7 +367,7 @@
     </section>
     
 
-    <!--**************   Review section *************-->
+    <!-- Review section -->
 
     <sectio class="review" id="review">
 
@@ -436,7 +496,7 @@
     </section>
 
 
-    <!--************     Contact us section   **************-->
+    <!--     Contact us section   -->
 
     <section>
         <div class="order" id="order">
@@ -497,7 +557,7 @@
         </div>
     </section>
 
-    <!--***********  footer (email.number,state etc) section design    *************-->
+    <!--  footer (email.number,state etc) section design    -->
 
     <section class="footer">
 
@@ -523,9 +583,9 @@
 
             <div class="box">
                 <h3>contact info</h3>
-                <a href="#">+91-9556615902</a>
-                <a href="#">+91-7853975048</a>
-                <a href="#">+91-7978699617</a>
+                <a href="#">+91-955536243615902</a>
+                <a href="#">+91-728532975033248</a>
+                <a href="#">+91-723947584699617</a>
                 <a href="#">rakesh246808@gmail.com</a>
                 <a href="#">satyajit7848@gmail.com</a>
                 <a href="#">sanitiser20@gmail.com</a>
@@ -545,10 +605,10 @@
     </section>
 
 
-    <!--************    loader part    ***********-->
-    <div class="loader-container">
+    <!--  loader part   -->
+    <!-- <div class="loader-container">
         <img src="images/loader2.gif" alt="">
-    </div>
+    </div> -->
 
 
 
@@ -557,10 +617,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
