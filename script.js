@@ -1,21 +1,45 @@
 // dark mode light
+var theme=0;
 let darkModeIcon = document.querySelector('#darkMode-icon');
+let neonModeIcon = document.querySelector('#neon-icon');
 darkModeIcon.onclick = () => {
     
-    darkModeIcon.classList.toggle('bx-sun');
-    
-    document.body.classList.toggle('dark-mode');
+    if(theme === 0)
+    {
+        darkModeIcon.classList.toggle('bx-sun');
+        
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('neon-mode');
+        theme=1;
+    }
+    else if(theme === 1)
+    {
+        darkModeIcon.classList.toggle('bx-menu');
+        
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('neon-mode');
+        theme=2;
+    }
+    else
+    {
+        darkModeIcon.classList.toggle('bx-sun');
+        document.body.classList.remove('dark-mode');
+        document.body.classList.remove('neon-mode');
+        theme = 0;
+    }
+
+
     
     
 };
 
 // neon
-let neonModeIcon = document.querySelector('#neon-icon');
+// let neonModeIcon = document.querySelector('#neon-icon');
 
-neonModeIcon.onclick = () => {
-    neonModeIcon.classList.toggle('bx-happy-heart-eyes');
-    document.body.classList.toggle('neon-mode');
-};
+// neonModeIcon.onclick = () => {
+//     neonModeIcon.classList.toggle('bx-happy-heart-eyes');
+//     document.body.classList.toggle('neon-mode');
+// };
 
 //menu bar
 let menu = document.querySelector('#menu-bars');
@@ -123,8 +147,19 @@ dot.onclick = () =>
 const formOpenBtn = document.querySelector("#form-Open");
 const formPopUp = document.querySelector(".form-popup");
 const formCloseButton = document.querySelector("#close_Btn");
-const logInBtn = document.querySelector("#Log-in-Btn");
-const signInBtn = document.querySelector("#Sign-In-Btn");
+const logInBtn = document.querySelector("#login");
+const signInBtn = document.querySelector("#signup");
 
 formOpenBtn.addEventListener("click", () => formPopUp.classList.add("show"));
 formCloseButton.addEventListener("click", () => formPopUp.classList.remove("show"));
+
+signInBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    formPopUp.classList.add("active");
+});
+
+
+logInBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    formPopUp.classList.remove("active");
+});
