@@ -28,7 +28,7 @@ html
 :root
 {
     --alpha-color: #dd7230;
-    --black:#192a56;
+    --font-color:#160f35;
     --light-color:#666;
     --navbaar-font-color:#000000;
     --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
@@ -57,14 +57,14 @@ html
     --login-sign_up:#000000;
     --login-hover-color:#ff00dd;
     --forget-password-color:#ff0000;
-
+    --alphaneon-color: #504d4b;
 }
 
 .dark-mode
 {
     --bg-color:black;
     --logo-color:rgb(255, 255, 255);
-    --black:#fff;
+    --font-color:#fff;
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
     --evenPages-color:black;
@@ -89,7 +89,7 @@ html
     --alphaneon-color: #dd7230;
     --navbaar-font-color:#fff;
     --bg-color:black;
-    --black:#fff;
+    --font-color:#fff;
     --btnboxhover-color:var(--alpha-color);
     --box-shadow:0rem .5rem 2rem var(--alpha-color);
     --logo-color:rgb(255, 255, 255);
@@ -111,7 +111,7 @@ html
      --login-font-color:#fff;
      --login-sign_up:#00ffee;
      --login-hover-color:#ff00dd;
-    --forget-password-color:#ff0000;
+     --forget-password-color:#ff0000;
 
 }
 
@@ -145,7 +145,7 @@ section:nth-child(even)
 .heading
 {
     text-align: center;
-    color: var(--black);
+    color: var(--font-color);
     font-size: 3rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
@@ -243,7 +243,7 @@ header .dot-open i
     width: 4.5rem;
     text-align: center;
     font-size: 1.7rem;
-    color: var(--black);
+    color: var(--font-color);
     border-radius: 50%;
     color:var(--underBoxtext-color);
     background: var(--alpha-color);
@@ -630,6 +630,7 @@ header .icons #menu-bars
     flex-wrap: wrap;
     gap: 2rem;
     padding-top: 9rem;
+    height: 98vh;
 }
 
 .home .home-slider .slide .content
@@ -655,7 +656,7 @@ header .icons #menu-bars
 
 .home .home-slider .slide .content h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 7rem;
 }
 
@@ -678,17 +679,191 @@ header .icons #menu-bars
 }
 
 /**********************  cart section   ****************************/
-#cart
+.cart
 {
    position: fixed;
-   left: 1;
+   /* left: 1; */
    right: 2%;
    top: 8%;
    margin-top: 2rem;
-   height: 500px;
+   height: 80vh;
+   width: 500px;
+   z-index: 100; 
    border: 2px solid red;
-   width: 100px;
-   z-index: 100;
+   left:100%;
+   background-color: var(--alpha-color);
+   transition: .5s; 
+}
+
+.cart h1
+{
+    color: #e8bc0e;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart .checkOut
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    border: 2px solid red;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cart .checkOut div
+{
+    background-color: #e8bc0e;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeShopping
+{
+    border: 2px solid red;
+}
+
+.cart .checkOut div:nth-child(2)
+{
+    background-color: #1c1f25;
+    color: #fff;
+}
+
+.cartOpen .cart 
+{
+    border: 2px solid red;  
+    left:calc(100% - 500px);
+}
+
+.container
+{
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 3.5rem;
+    margin-top: 50px;
+    /* border: 2px solid red; */
+}
+
+.list .item
+{
+    border:1px solid var(--font-color);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+    box-shadow: 0 0 1.2rem var(--alphaneon-color);
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    height: 35rem;
+    width: 35rem;
+    gap: 1.5rem;
+}
+
+
+.list .item img
+{
+    /* border: 2px solid red; */
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+}
+
+.list .item .title
+{
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--font-color);
+}
+
+.list .item .price
+{
+    font-size: 2rem;
+    margin: 10px;
+    color: var(--font-color);
+}
+
+.list .item button
+{
+    background-color:var(--bgbtn-color);
+    color: var(--borderbtn-color);
+    padding: 10px;
+    width: 80%;
+    position: absolute;
+    
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: .1rem solid var(--borderbtn-color);
+    bottom: -5rem;
+}
+
+.list .item:hover button
+{
+    bottom: 1rem;
+}
+
+.list .item button:hover
+{
+    box-shadow: 0rem 0rem 5rem var(--alpha-color);
+}
+
+.listCard li
+{
+    display: grid;
+    grid-template-columns:  100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listCard li div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img
+{
+    height:7rem;
+    width: 90%;
+    border-radius: 50%;
+}
+
+.listCard button
+{
+    width: 2rem;
+    background: #fff5;
+    border: none;
+}
+
+.listCard .count
+{
+    margin: 0 10px;
 }
 
 
@@ -713,47 +888,6 @@ header .icons #menu-bars
     box-shadow: 0 0 1.2rem var(--alphaneon-color);
 }
 
-
-/* .dishes .box-container .box .fa-heart,
-.dishes .box-container .box .fa-eye
-{
-    position: absolute;
-    top: 1.5rem;
-    background: var(--btn-color);
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color: var(--black);
-}  
-.dishes .box-container .box .fa-heart:hover,
-.dishes .box-container .box .fa-eye:hover
-{
-    background: var(--alpha-color);
-    color: var(--underBoxtext-color);
-}
-
-.dishes .box-container .box .fa-heart
-{
-    right: -15rem;
-}
-
-.dishes .box-container .box .fa-eye
-{
-    left: -15rem;
-}
-
-.dishes .box-container .box:hover .fa-heart
-{
-    right: 1.5rem;
-}
-
-.dishes .box-container .box:hover .fa-eye
-{
-    left: 1.5rem;
-} */
-
 .dishes .box-container .box img
 {
     height:17rem;
@@ -763,7 +897,7 @@ header .icons #menu-bars
 
 .dishes .box-container .box h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 2.5rem;
 }
 
@@ -824,7 +958,7 @@ header .icons #menu-bars
 
 .about .row .content h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 4rem;
     padding: 5rem 0;
 }
@@ -868,7 +1002,7 @@ header .icons #menu-bars
 .about .row .content .icons-container .icons span
 {
     font-size: 1.5rem;
-    color: var(--black);
+    color: var(--font-color);
 }
 
 
@@ -910,7 +1044,7 @@ header .icons #menu-bars
 
 .review .slide .user h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 2rem;
     padding-bottom: .5rem;
 }
@@ -968,11 +1102,11 @@ header .icons #menu-bars
     border-radius: .5rem;
     padding: 1rem;
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--font-color);
     text-transform: none;
     margin-bottom: 1rem;
     width: 100%;
-    border: .1rem solid var(--black);
+    border: .1rem solid var(--font-color);
     box-shadow: 0rem 0rem .1rem var(--alpha-color);
 }
 
@@ -1006,7 +1140,7 @@ header .icons #menu-bars
 {
     padding: .5rem 0;
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--font-color);
 }
 
 .footer .box-container .box a
