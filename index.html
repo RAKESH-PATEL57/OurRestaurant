@@ -55,7 +55,7 @@
                 <i class='bx bx-moon' id="darkMode-icon"></i>
                 <i class='bx bx-search' id="search-icon"></i>
                 <!-- <a href="#" class='bx bx-heart' id="heart"></a> -->
-                <a href="#" class='bx bx-cart'>0</a>
+                <a href="#" class='bx bx-cart'><span class="quantity">0</span></a>
             </div>
   </header>
 
@@ -120,12 +120,15 @@
         <i class="bx bx-x" id="close"></i>
   </form>
 
-  <section id="cart">
-    <div class="cart-content">
-
+   <!-- cart section  -->
+  <div class="cart">
+       <h1>Card</h1>
+       <ul class="listCard"></ul>
+       <div class="checkOut"> 
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+       </div>
     </div>
-
-  </section>
 
    <!-- section design -->
     <section class="home" id="home">
@@ -186,16 +189,23 @@
     <!--  Dishes Section    -->
     <section>
 
+       
+
         <div class="dishes" id="dishes">
     
             <h3 class="sub-heading"> our dishes </h3>
             <h1 class="heading"> popular dishes </h1>
+            
+            <!-- heart of food -->
+            <div class="container">
+                <div class="list"></div>
+            </div>
     
-            <div class="box-container">
+            <!-- <div class="box-container">
                 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes1.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -210,8 +220,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes2.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -226,8 +236,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes3.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -242,8 +252,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes4.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -258,8 +268,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes5.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -274,8 +284,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes6.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -290,8 +300,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes7.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -306,8 +316,8 @@
                 </div>
 
                 <div class="box">
-                    <!-- <a href="#" class="fas fa-heart"></a> -->
-                    <!-- <a href="#" class="fas fa-eye"></a> -->
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
                     <img src="images/dishes8.jpg" alt="">
                     <h3>Tasty Food</h3>
                     <div class="stars">
@@ -321,7 +331,7 @@
                     <a href="#" class="btn">Add to cart</a>
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
 
@@ -606,9 +616,9 @@
 
 
     <!--  loader part   -->
-    <div class="loader-container">
+    <!-- <div class="loader-container">
         <img src="images/loader2.gif" alt="">
-    </div>
+    </div> -->
 
 
 
