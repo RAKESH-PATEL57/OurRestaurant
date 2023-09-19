@@ -192,54 +192,61 @@ let products =
         id:1,
         name: 'PRODUCT NAME 1',
         image: 'dishes1.jpg' ,
-        price: 120,
-        newprice: 150
+        price: 1200,
+        newprice: null
     },
     {
         id:2,
         name: 'PRODUCT NAME 2',
         image: 'dishes2.jpg' ,
-        price: 120,
-        newprice: 150
+        price: 190,
+        newprice: null
     },
     {
         id:3,
         name: 'PRODUCT NAME 3',
         image: 'dishes3.jpg' ,
-        price: 320
+        price: 320,
+        newprice: 120
         
     },
     {
         id:4,
         name: 'PRODUCT NAME 4',
         image: 'dishes4.jpg' ,
-        price: 140
+        price: 180,
+        newprice: null
     },
     {
         id:5,
         name: 'PRODUCT NAME 5',
         image: 'dishes5.jpg' ,
-        price: 150
+        price: 180,
+        newprice: null
     },
     {
         id:6,
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
-        price: 140
+        price: 140,
+        newprice: 50
     },
     {
-        id:6,
+        id:7,
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
-        price: 160
+        price: 160,
+        newprice: null
     },
     {
-        id:6,
+        id:8,
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
-        price: 160
+        price: 160,
+        newprice: null
     },
 ]
+
 
 let listCards = [];
 
