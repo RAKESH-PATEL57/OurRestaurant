@@ -192,36 +192,36 @@ let products =
         id:1,
         name: 'PRODUCT NAME 1',
         image: 'dishes1.jpg' ,
-        price: 1200,
-        newprice: null
+        price: 120,
+        newprice: 150
     },
     {
         id:2,
         name: 'PRODUCT NAME 2',
         image: 'dishes2.jpg' ,
-        price: 190,
-        newprice: null
+        price: 120,
+        newprice: 150
     },
     {
         id:3,
         name: 'PRODUCT NAME 3',
         image: 'dishes3.jpg' ,
         price: 320,
-        newprice: 120
+        newprice: null
         
     },
     {
         id:4,
         name: 'PRODUCT NAME 4',
         image: 'dishes4.jpg' ,
-        price: 180,
+        price: 140,
         newprice: null
     },
     {
         id:5,
         name: 'PRODUCT NAME 5',
         image: 'dishes5.jpg' ,
-        price: 180,
+        price: 150,
         newprice: null
     },
     {
@@ -229,17 +229,17 @@ let products =
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
         price: 140,
-        newprice: 50
+        newprice: null
     },
     {
-        id:7,
+        id:6,
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
         price: 160,
         newprice: null
     },
     {
-        id:8,
+        id:6,
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
         price: 160,
@@ -247,25 +247,32 @@ let products =
     },
 ]
 
-
 let listCards = [];
 
 function initApp(){
     products.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
+        if(value.newprice!=null){
         newDiv.innerHTML = `
            <img src="./images/${value.image}"/>
            <div class="title">${value.name} </div>
            <div class="prices"> <span class="price">${'₹'+value.price.toLocaleString()}</span><span class="newprice">${'₹'+value.newprice.toLocaleString()}</span></div>
            <button onclick="addToCard(${key})">Add To Card</button>
-        `;
+        `;}
+        else{
+            newDiv.innerHTML = `
+               <img src="./images/${value.image}"/>
+               <div class="title">${value.name} </div>
+               <div class="prices">${'₹'+value.price.toLocaleString()}</div>
+               <button onclick="addToCard(${key})">Add To Card</button>
+            `;}
         list.appendChild(newDiv);
+
     })
 }
 
 initApp();
-
 function addToCard(key)
 {
     if(listCards[key] == null){
