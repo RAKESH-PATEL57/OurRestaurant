@@ -192,37 +192,52 @@ let products =
         id:1,
         name: 'PRODUCT NAME 1',
         image: 'dishes1.jpg' ,
-        price: 12000
+        price: 120,
+        newprice: 150
     },
     {
         id:2,
         name: 'PRODUCT NAME 2',
         image: 'dishes2.jpg' ,
-        price: 12077
+        price: 120,
+        newprice: 150
     },
     {
         id:3,
         name: 'PRODUCT NAME 3',
         image: 'dishes3.jpg' ,
-        price: 32000
+        price: 320
+        
     },
     {
         id:4,
         name: 'PRODUCT NAME 4',
         image: 'dishes4.jpg' ,
-        price: 14000
+        price: 140
     },
     {
         id:5,
         name: 'PRODUCT NAME 5',
         image: 'dishes5.jpg' ,
-        price: 15000
+        price: 150
     },
     {
         id:6,
         name: 'PRODUCT NAME 6',
         image: 'dishes6.jpg' ,
-        price: 16000
+        price: 140
+    },
+    {
+        id:6,
+        name: 'PRODUCT NAME 6',
+        image: 'dishes6.jpg' ,
+        price: 160
+    },
+    {
+        id:6,
+        name: 'PRODUCT NAME 6',
+        image: 'dishes6.jpg' ,
+        price: 160
     },
 ]
 
@@ -235,7 +250,7 @@ function initApp(){
         newDiv.innerHTML = `
            <img src="./images/${value.image}"/>
            <div class="title">${value.name} </div>
-           <div class="price">${value.price.toLocaleString()} </div>
+           <div class="prices"> <span class="price">${'₹'+value.price.toLocaleString()}</span><span class="newprice">${'₹'+value.newprice.toLocaleString()}</span></div>
            <button onclick="addToCard(${key})">Add To Card</button>
         `;
         list.appendChild(newDiv);
@@ -276,6 +291,24 @@ function reloadCard(){
             `;
             listCard.appendChild(newDiv);
         }
+        else if(value == null)
+        {
+            count = 0;
+            totalPrice = 0;
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div><img src="./images/${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick = "changeQuantity(${key}, ${value.quantity - 1})" >-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick = "changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                    
+                </div>
+                
+            `;
+        }
     })
 
     total.innerText = totalPrice.toLocaleString();
@@ -292,5 +325,9 @@ function changeQuantity(key, quantity){
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
+    
+    // let timeSave = "expires=Thus, 31 Dec 2025 23:59:59 UTC";
+    // document.cookie = "listCart= "+ JSON.stringify(listCard)+"; "+timeSave+";path/;";
     reloadCard();
 }
+
