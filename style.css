@@ -690,10 +690,10 @@ header .icons #menu-bars
    width: 50rem;
    z-index: 100; 
    left:100%;
-   left:calc(100% - 500px);
    background-color:var(--bg-color);
    box-shadow: inset 0px 0px 1rem var(--alphaneon-color);
    transition: .5s; 
+   overflow: scroll;
 }
 
 .cart h1
@@ -809,12 +809,68 @@ header .icons #menu-bars
     color: var(--font-color);
 }
 
+.list .item .prices
+{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    position: relative;
+    display: inline-block; 
+    margin-left: 1rem;
+    display: inline;   
+
+}
 .list .item .price
 {
     font-size: 2rem;
-    margin: 10px;
-    color: var(--font-color);
+    color: grey;
+    position: relative;
+    display: inline-block; 
+    margin-left: 1rem;
+
 }
+
+.list .item .newprice
+{
+    font-size: 2rem;
+    color: rgb(255, 0, 0);
+
+   position: relative;
+   display: inline-block; 
+   margin-left: 1rem;
+}
+
+.list .item .price::before
+{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: inherit;
+    
+    -moz-transform:rotate(25deg);
+    -ms-transform:rotate(25deg);
+    -o-transform:rotate(25deg);
+    transform:rotate(25deg);
+}
+.list .item .price::after
+{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: inherit;
+    
+    -webkit-transform:rotate(-25deg) rotate(25deg);
+    -moz-transform:rotate(-25deg);
+    -ms-transform:rotate(-25deg);
+    -o-transform:rotate(-25deg);
+    transform:rotate(-25deg);
+}
+
 
 .list .item button
 {
@@ -828,7 +884,7 @@ header .icons #menu-bars
     border-radius: .5rem;
     cursor: pointer;
     border: .1rem solid var(--borderbtn-color);
-    bottom: -5rem;
+    bottom: -25rem;
 }
 
 .list .item:hover button
