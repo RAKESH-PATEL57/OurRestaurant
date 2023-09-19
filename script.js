@@ -111,18 +111,18 @@ var swiper = new Swiper(".review-slider", {
   });  
 
 
-//*********** */   loader section designing   ***************
-// function loader()
-// {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
+// *********** */   loader section designing   ***************
+function loader()
+{
+    document.querySelector('.loader-container').classList.add('fade-out');
+}
 
-// function fadeOut()
-// {
-//     setInterval(loader, 1000);
-// }
+function fadeOut()
+{
+    setInterval(loader, 1000);
+}
 
-// window.onload = fadeOut;
+window.onload = fadeOut;
 
 
 
@@ -251,7 +251,7 @@ let listCards = [];
 
 function initApp(){
     products.forEach((value, key) => {
-        let newDiv = document.createElement('div');
+        let newDiv = document.createElement('totalCartItem');
         newDiv.classList.add('item');
         if(value.newprice!=null){
         newDiv.innerHTML = `
