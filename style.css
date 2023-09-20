@@ -691,15 +691,13 @@ header .icons #menu-bars
    z-index: 100; 
    left:100%;
    background-color:var(--bg-color);
-   box-shadow: inset 0px 0px 1rem var(--alphaneon-color);
+   box-shadow: inset 0px 0px 10px var(--alphaneon-color);
    transition: .5s; 
-   overflow: scroll;
 }
 
 .cart h1
 {
     color:var(--font-color);
-    /* border: 2px solid red; */
     margin: 0;
     padding: 0 20px;
     height: 80px;
@@ -715,7 +713,7 @@ header .icons #menu-bars
     bottom: 0;
     width: 100%;
     display: grid;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -734,7 +732,7 @@ header .icons #menu-bars
 .cart .checkOut .buybtn
 {
     display: block;
-    border: 2px solid rgb(0, 238, 255);
+    /* border: 2px solid rgb(0, 238, 255); */
     height: 70px ;
 }
 
@@ -751,14 +749,13 @@ header .icons #menu-bars
 
 .cartOpen .cart 
 {
-    border: 2px solid red;  
+    /* border: 2px solid red;   */
     left:calc(100% - 500px);
 }
 
 .container
 {
     margin: auto;
-    /* border: 2px solid red; */
 }
 
 .list
@@ -770,7 +767,6 @@ header .icons #menu-bars
     height: 100%;
     gap: 3.5rem;
     margin-top: 50px;
-    /* border: 2px solid red; */
 }
 
 .list .item
@@ -786,11 +782,11 @@ header .icons #menu-bars
     box-shadow: 0 0 1.2rem var(--alphaneon-color);
     letter-spacing: 1px;
     position: relative;
-    overflow: hidden;
     transition: .5s;
     height: 35rem;
     width: 35rem;
     gap: 1.5rem;
+    overflow: hidden;
 }
 
 
@@ -897,6 +893,15 @@ header .icons #menu-bars
     box-shadow: 0rem 0rem 5rem var(--alpha-color);
 }
 
+.listCard
+{
+    height: 50vh;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
 .listCard li
 {
     display: grid;
@@ -905,13 +910,13 @@ header .icons #menu-bars
     row-gap: 10px;
     margin-bottom: 20px;
     font-size: 1.4rem;
-    border: 2px solid aqua;
+    /* border: 2px solid aqua; */
 }
 
 .listCard li div
 {
     display: flex;
-    border: 2px solid aqua;
+    /* border: 2px solid aqua; */
     justify-content: center;
     align-items: center;
 }
