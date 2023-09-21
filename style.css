@@ -628,9 +628,11 @@ header .icons #menu-bars
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     padding-top: 9rem;
     height: 98vh;
+    border: 2px solid red;
 }
 
 .home .home-slider .slide .content
@@ -1137,6 +1139,8 @@ header .icons #menu-bars
     color: var(--light-color);
 }
 
+
+
 /************   order section designing    **************/
 
 .order form
@@ -1202,6 +1206,13 @@ header .icons #menu-bars
     margin-top: 0;
 }
 
+/***********  delivery gif designing  ************/
+
+
+
+
+
+
 /***********  footer (email.number,state etc) section design    ************/
 
 .footer .box-container
@@ -1266,7 +1277,7 @@ header .icons #menu-bars
 
 /************    Making website Responsive  *********** */
 
-@media (max-width:1095px)
+@media (max-width:1132px)
 {
     html
     {
@@ -1278,7 +1289,17 @@ header .icons #menu-bars
         padding: 1rem 2rem;
     }
 
+}
 
+@media (max-width:1115px)
+{
+    .home .content
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 
@@ -1320,8 +1341,22 @@ header .icons #menu-bars
 
 }
 
+@media (max-width:503px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
 @media (max-width:480px)
 {
+    
+    html
+    {
+        font-size: 40%;
+    }
+     
     header .dot-open #dot
     {
         display: inline-block;
@@ -1356,7 +1391,12 @@ header .icons #menu-bars
 
     html
     {
-        font-size: 50%;
+        font-size: 40%;
+    }
+
+    .home .home-slider .slide .content h3
+    {  
+        font-size: 6rem;
     }
 
     .dishes .box-container .box img
