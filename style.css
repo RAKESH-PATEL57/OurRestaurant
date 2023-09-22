@@ -632,7 +632,6 @@ header .icons #menu-bars
     gap: 2rem;
     padding-top: 9rem;
     height: 98vh;
-    border: 2px solid red;
 }
 
 .home .home-slider .slide .content
@@ -1391,7 +1390,7 @@ header .icons #menu-bars
 
     html
     {
-        font-size: 40%;
+        font-size: 45%;
     }
 
     .home .home-slider .slide .content h3
