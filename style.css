@@ -29,13 +29,13 @@ html
 {
     --alpha-color: #dd7230;
     --font-color:#160f35;
+    --bg-navbar:#ffffff;
     --light-color:#666;
     --navbaar-font-color:#000000;
     --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
     --underBoxtext-color:#fff;
     --bg-color:#fff;
     --logo-color:black;
-    --bg-navbar:#000000;
     --icon-color:black;
     --btn-color:#fff;
     --dots-color:var(--light-color);
@@ -65,10 +65,14 @@ html
     --bg-color:black;
     --logo-color:rgb(255, 255, 255);
     --font-color:#fff;
+
+    
+    --bg-navbar:#1b1e22;
+    --navbaar-font-color:#000000;
+    
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
     --evenPages-color:black;
-    --navbaar-font-color:#fff;
     --btnboxhover-color:var(--alpha-color);
     --btn-color:#000000;
 
@@ -1316,7 +1320,7 @@ header .icons #menu-bars
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: var(--bg-navbar);
         border-top: .1rem solid rgba(0,0,0,.2);
         border-bottom: .1rem solid rgba(0,0,0,.2);
         padding: 1rem;
