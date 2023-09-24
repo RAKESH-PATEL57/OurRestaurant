@@ -30,8 +30,10 @@ html
     --alpha-color: #dd7230;
     --font-color:#160f35;
     --bg-navbar:#ffffff;
+
     --light-color:#666;
     --navbaar-font-color:#000000;
+
     --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
     --underBoxtext-color:#fff;
     --bg-color:#fff;
@@ -68,7 +70,7 @@ html
 
     
     --bg-navbar:#1b1e22;
-    --navbaar-font-color:#000000;
+    --navbaar-font-color:#ffffff;
     
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
@@ -94,6 +96,10 @@ html
     --navbaar-font-color:#fff;
     --bg-color:black;
     --font-color:#fff;
+
+    --bg-navbar:#1b1e22;
+    --navbaar-font-color:#ffffff;
+
     --btnboxhover-color:var(--alpha-color);
     --box-shadow:0rem .5rem 2rem var(--alpha-color);
     --logo-color:rgb(255, 255, 255);
@@ -813,7 +819,7 @@ header .icons #menu-bars
 .list .item .prices
 {
     font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: var(--font-color);
     position: relative;
     display: inline-block; 
     margin-left: 1rem;
@@ -1151,10 +1157,13 @@ header .icons #menu-bars
     max-width: 90rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    border: .1rem solid rgba(0,0,0,.2);
+    border: .05rem solid var(--font-color);
     background: var(--btn-color);
     padding: 1.5rem;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .order form .inputBox
@@ -1204,9 +1213,14 @@ header .icons #menu-bars
     resize: none;
 }
 
-.order form .inputBox .btn
+.order form  .btn
 {
     margin-top: 0;
+    justify-content: center;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    
 }
 
 /***********  delivery gif designing  ************/
@@ -1325,6 +1339,11 @@ header .icons #menu-bars
         border-bottom: .1rem solid rgba(0,0,0,.2);
         padding: 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar > a
+    {
+        color: #000;
     }
 
     header .navbar.active
