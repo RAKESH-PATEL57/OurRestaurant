@@ -904,7 +904,6 @@ header .icons #menu-bars
 {
     height: 50vh;
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     overflow: scroll;
 }
@@ -917,13 +916,11 @@ header .icons #menu-bars
     row-gap: 10px;
     margin-bottom: 20px;
     font-size: 1.4rem;
-    /* border: 2px solid aqua; */
 }
 
 .listCard li div
 {
     display: flex;
-    /* border: 2px solid aqua; */
     justify-content: center;
     align-items: center;
 }
