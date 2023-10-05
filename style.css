@@ -881,7 +881,7 @@ header .icons #menu-bars
 
 .list .item button
 {
-    background-color:var(--bgbtn-color);
+    background-color:var(--alpha-color);
     color: var(--borderbtn-color);
     padding: 10px;
     width: 80%;
@@ -892,16 +892,12 @@ header .icons #menu-bars
     cursor: pointer;
     border: .1rem solid var(--borderbtn-color);
     bottom: -25rem;
+    transition: .5s;
 }
 
 .list .item:hover button
 {
     bottom: 1rem;
-}
-
-.list .item button:hover
-{
-    box-shadow: 0rem 0rem 5rem var(--alpha-color);
 }
 
 .listCard
