@@ -692,7 +692,7 @@ header .icons #menu-bars
 /**********************  cart section   ****************************/
 .cart
 {
-   position: fixed;
+   position:fixed;
    /* left: 1; */
    right: 2%;
    top: 8%;
@@ -724,8 +724,8 @@ header .icons #menu-bars
     bottom: 0;
     width: 100%;
     display: grid;
-    /* border: 2px solid red; */
     grid-template-columns: repeat(2, 1fr);
+    
 }
 
 .cart .checkOut div
@@ -738,12 +738,14 @@ header .icons #menu-bars
     align-items: center;
     font-weight: bold;
     cursor: pointer;
+    
 }
 
 .cart .checkOut .buybtn
 {
-    display: block;
-    /* border: 2px solid rgb(0, 238, 255); */
+    display: flex;
+    text-align: center;
+    border: 2px solid rgb(0, 238, 255);
     height: 70px ;
 }
 
@@ -756,6 +758,7 @@ header .icons #menu-bars
 {
     background-color: #1c1f25;
     color: #fff;
+
 }
 
 .cartOpen .cart 
@@ -777,7 +780,7 @@ header .icons #menu-bars
     align-items: center;
     height: 100%;
     gap: 3.5rem;
-    margin-top: 50px;
+    margin-top: 50px;    
 }
 
 .list .item
@@ -856,9 +859,9 @@ header .icons #menu-bars
     border-top: 2px solid;
     border-color: inherit;
     
-    -moz-transform:rotate(25deg);
-    -ms-transform:rotate(25deg);
-    -o-transform:rotate(25deg);
+    /* -moz-transform:rotate(25deg); */
+    /* -ms-transform:rotate(25deg); */
+    /* -o-transform:rotate(25deg); */
     transform:rotate(25deg);
 }
 .list .item .price::after
@@ -871,10 +874,10 @@ header .icons #menu-bars
     border-top: 2px solid;
     border-color: inherit;
     
-    -webkit-transform:rotate(-25deg) rotate(25deg);
-    -moz-transform:rotate(-25deg);
-    -ms-transform:rotate(-25deg);
-    -o-transform:rotate(-25deg);
+    /* -webkit-transform:rotate(-25deg) rotate(25deg); */
+    /* -moz-transform:rotate(-25deg); */
+    /* -ms-transform:rotate(-25deg); */
+    /* -o-transform:rotate(-25deg); */
     transform:rotate(-25deg);
 }
 
@@ -902,10 +905,13 @@ header .icons #menu-bars
 
 .listCard
 {
-    height: 50vh;
+    max-height: 56vh;
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
+    overflow-x: hidden;
+    /* border: 2px solid red; */
+
 }
 
 .listCard li
