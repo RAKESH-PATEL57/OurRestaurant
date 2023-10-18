@@ -1225,6 +1225,11 @@ header .icons #menu-bars
 
 /***********  footer (email.number,state etc) section design    ************/
 
+.footer
+{
+    position: relative;
+}
+
 .footer .box-container
 {
     display: grid;
@@ -1245,7 +1250,9 @@ header .icons #menu-bars
     display: block;
     padding: .5rem 0;
     font-size: 1.5rem;
-    color: var(--light-color);
+    color: var(--font-color);
+    font-weight: 700;
+    z-index: 10;
 }
 
 .footer .box-container .box a:hover
@@ -1253,6 +1260,35 @@ header .icons #menu-bars
     color: var(--alpha-color);
     text-decoration: underline;
 }
+
+
+/*****   footer background   *********/
+
+.custom-shape-divider-bottom-1697536969 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    opacity: .5;
+    pointer-events: none;
+    z-index: -10;
+}
+
+.custom-shape-divider-bottom-1697536969 svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 223px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1697536969 .shape-fill {
+    fill: var(--alpha-color);
+}
+
 
 
 /************   loader section    ************/
