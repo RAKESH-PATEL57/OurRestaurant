@@ -1307,6 +1307,19 @@ header .icons #menu-bars
 
 /************   loader section    ************/
 
+.main
+{
+    display: none;
+}
+
+.loading-off
+{
+    .main
+    {
+        display: block;
+    }
+}
+
 .loader-container
 {
     position: fixed;
