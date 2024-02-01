@@ -228,100 +228,115 @@ openShopping.addEventListener('click', () => {
 
 closeShopping.addEventListener('click', () => {
     body.classList.remove('cartOpen');
-    console.log(1);
+    // console.log(1);
 })
 
-let products = 
-[
-    {
-        id:1,
-        name: 'PRODUCT NAME 1',
-        image: 'dishes1.jpg' ,
-        price: 120,
-        newprice: 150
-    },
-    {
-        id:2,
-        name: 'PRODUCT NAME 2',
-        image: 'dishes2.jpg' ,
-        price: 120,
-        newprice: 150
-    },
-    {
-        id:3,
-        name: 'PRODUCT NAME 3',
-        image: 'dishes3.jpg' ,
-        price: 320,
-        newprice: null
+// let products = 
+// [
+//     {
+//         id:1,
+//         name: 'PRODUCT NAME 1',
+//         image: 'dishes1.jpg' ,
+//         price: 120,
+//         newprice: 150
+//     },
+//     {
+//         id:2,
+//         name: 'PRODUCT NAME 2',
+//         image: 'dishes2.jpg' ,
+//         price: 120,
+//         newprice: 150
+//     },
+//     {
+//         id:3,
+//         name: 'PRODUCT NAME 3',
+//         image: 'dishes3.jpg' ,
+//         price: 320,
+//         newprice: null
         
-    },
-    {
-        id:4,
-        name: 'PRODUCT NAME 4',
-        image: 'dishes4.jpg' ,
-        price: 140,
-        newprice: null
-    },
-    {
-        id:5,
-        name: 'PRODUCT NAME 5',
-        image: 'dishes5.jpg' ,
-        price: 150,
-        newprice: null
-    },
-    {
-        id:6,
-        name: 'PRODUCT NAME 6',
-        image: 'dishes6.jpg' ,
-        price: 140,
-        newprice: null
-    },
-    {
-        id:6,
-        name: 'PRODUCT NAME 6',
-        image: 'dishes6.jpg' ,
-        price: 160,
-        newprice: null
-    },
-    {
-        id:6,
-        name: 'PRODUCT NAME 6',
-        image: 'dishes6.jpg' ,
-        price: 160,
-        newprice: null
-    },
-]
+//     },
+//     {
+//         id:4,
+//         name: 'PRODUCT NAME 4',
+//         image: 'dishes4.jpg' ,
+//         price: 140,
+//         newprice: null
+//     },
+//     {
+//         id:5,
+//         name: 'PRODUCT NAME 5',
+//         image: 'dishes5.jpg' ,
+//         price: 150,
+//         newprice: null
+//     },
+//     {
+//         id:6,
+//         name: 'PRODUCT NAME 6',
+//         image: 'dishes6.jpg' ,
+//         price: 140,
+//         newprice: null
+//     },
+//     {
+//         id:6,
+//         name: 'PRODUCT NAME 6',
+//         image: 'dishes6.jpg' ,
+//         price: 160,
+//         newprice: null
+//     },
+//     {
+//         id:6,
+//         name: 'PRODUCT NAME 6',
+//         image: 'dishes6.jpg' ,
+//         price: 160,
+//         newprice: null
+//     },
+// ]
 
 let listCards = [];
+// let api_Url = "./products.json";
 
-function initApp(){
-    products.forEach((value, key) => {
+async function initApp(){
+    // const products = await fetch(url);
+    const products = await fetch ('products.json');
+    const productsList = await products.json();
+    // console.log (productsList);
+    let rk = products;
+
+    productsList.forEach((value, key) => {
         let newDiv = document.createElement('totalCartItem');
+        
         newDiv.classList.add('item');
         if(value.newprice!=null){
         newDiv.innerHTML = `
            <img src="./images/${value.image}"/>
            <div class="title">${value.name} </div>
            <div class="prices"> <span class="price">${'₹'+value.price.toLocaleString()}</span><span class="newprice">${'₹'+value.newprice.toLocaleString()}</span></div>
-           <button onclick="addToCard(${key})">Add To Card</button>
-        `;}
-        else{
+           <button onclick="addToCard(${key})">Add To Card</button>   
+           `}       
+
+           else{
             newDiv.innerHTML = `
                <img src="./images/${value.image}"/>
                <div class="title">${value.name} </div>
                <div class="prices">${'₹'+value.price.toLocaleString()}</div>
                <button onclick="addToCard(${key})">Add To Card</button>
-            `;}
+            `}
         list.appendChild(newDiv);
 
-    })
+    });
 }
 
 initApp();
-function addToCard(key)
+
+async function addToCard(key)
 {
+
+    const cartProducts = await fetch ('products.json');
+    // const propertyNames = Object.keys(key);
+    const cartProductsList = await cartProducts.json();
+
     if(listCards[key] == null){
-        listCards[key] = products[key];
+        listCards[key] = cartProductsList[key];
         listCards[key].quantity = 1;
      }
     else{
