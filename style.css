@@ -10,11 +10,118 @@
     border: none;
     text-transform: capitalize;      /*  It makes first letter capital */
     transition: all .2s linear;
+    scroll-behavior: smooth;
+}
+
+:root
+{
+    --alpha-color: #dd7230;
+    --font-color:#160f35;
+    --bg-navbar:#ffffff;
+
+    --light-color:#666;
+    --navbaar-font-color:#000000;
+
+    --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
+    --underBoxtext-color:#fff;
+    --bg-color:#fff;
+    --logo-color:black;
+    --icon-color:black;
+    --btn-color:#fff;
+    --dots-color:var(--light-color);
+
+    --btnhover-color:var(--alpha-color);
+    --borderbtn-color:#fff;
+    --bgbtn-color:#192a56;
+    --btnboxhover-color:white;
+
+    --dishesborder-color:rgba(0,0,0,.2);
+    --dishes-color:#eee;
+
+    /****  login and sign-up section colors  *****/
+    --login-main-color: #000000;
+    --login-bg-color:#ffffff;
+    --login-font-color:#000000;
+    --close-btn-login-signin:#00aaff;
+    --login-btn-hover-Color:#fff;
+    --login-sign_up:#000000;
+    --login-hover-color:#ff00dd;
+    --forget-password-color:#ff0000;
+    --alphaneon-color: #504d4b;
+}
+
+.dark-mode
+{
+    --bg-color:black;
+    --logo-color:rgb(255, 255, 255);
+    --font-color:#fff;
+
+    
+    --bg-navbar:#1b1e22;
+    --navbaar-font-color:#ffffff;
+    
+    --light-color:#e4e1e1;
+    --dots-color:#ffffff;
+    --evenPages-color:black;
+    --btnboxhover-color:var(--alpha-color);
+    --btn-color:#000000;
+
+    --underBoxtext-color:#000000;
+    --dishesborder-color:#fff;
+
+      /****  login and sign-up section colors  *****/
+    --login-bg-color:#000000;
+    --login_signin-shadow-color:var(--alpha-color);
+    --login-font-color:#ffffff;
+    --login-sign_up:#ff0000;
+    --login-hover-color:#ff00dd;
+    --forget-password-color:#ff0000;
+}
+
+.neon-mode
+{
+    --alphaneon-color: #dd7230;
+    --navbaar-font-color:#fff;
+    --bg-color:black;
+    --font-color:#fff;
+
+    --bg-navbar:#1b1e22;
+    --navbaar-font-color:#ffffff;
+
+    --btnboxhover-color:var(--alpha-color);
+    --box-shadow:0rem .5rem 2rem var(--alpha-color);
+    --logo-color:rgb(255, 255, 255);
+    --evenPages-color:black;
+    --light-color:#e4e1e1;
+    --borderbtn-color:#fff;
+    --bgbtn-color:#000000;
+    
+    --btn-color:black;
+    --btnhover-color:black;
+    
+    --underBoxtext-color:#000000;
+    --dishesborder-color:#fff;
+
+     /****  login and sign-up section colors  *****/
+     --login-main-color: #000000;
+     --login-bg-color:black;
+     --login_signin-shadow-color:var(--alpha-color);
+     --login-font-color:#fff;
+     --login-sign_up:#00ffee;
+     --login-hover-color:#ff00dd;
+     --forget-password-color:#ff0000;
+
 }
 
 body
 {
     background: var(--bg-color);
+}
+
+.body.bodyScroll
+{
+    overflow-y: hidden;
+    height: 100vh;
 }
 
 html
@@ -24,72 +131,9 @@ html
     scroll-padding-top: 5.5rem;
 }
 
-:root
+.header.headerblur
 {
-    --chamuch: #f25b0a;
-    --black:#192a56;
-    --light-color:#666;
-    --box-shadow:0 .4rem 1.5rem rgba(0,0,0,.1);
-    --underBoxtext-color:#fff;
-    --bg-color:#fff;
-    --logo-color:black;
-    --bg-navbar:#666;
-    --icon-color:black;
-    --btn-color:#fff;
-    --dots-color:var(--light-color);
-
-    --btnhover-color:var(--chamuch);
-    --borderbtn-color:#fff;
-    --bgbtn-color:#192a56;
-    --btnboxhover-color:white;
-
-    --dishesborder-color:rgba(0,0,0,.2);
-    --dishes-color:#eee;
-
-}
-
-.dark-mode
-{
-    --bg-color:black;
-    --logo-color:rgb(255, 255, 255);
-    --black:#fff;
-    --light-color:#e4e1e1;
-    --dots-color:#ffffff;
-    --evenPages-color:black;
-
-    --btnboxhover-color:rgb(0, 13, 255);
-    --btn-color:#000000;
-
-    --underBoxtext-color:#000000;
-    --dishesborder-color:#fff;
-}
-
-.neon-mode
-{
-    --bg-color:black;
-    --black:#fff;
-    --box-shadow:0rem 1rem 5rem #00b3ff;
-    --logo-color:rgb(255, 255, 255);
-    --evenPages-color:black;
-    --light-color:#e4e1e1;
-    --borderbtn-color:#fff;
-    --bgbtn-color:#000000;
-    
-    --btn-color:black;
-    --btnhover-color:black;
-    --btnboxhover-color:rgb(0, 13, 255);
-    
-    --underBoxtext-color:#000000;
-    --dishesborder-color:#fff;
-
-}
-
-@keyframes animateBg
-{
-    100%
-    {
-        filter: hue-rotate(360deg);
-    }
+    filter: blur(5px);
 }
 
 
@@ -106,7 +150,7 @@ section:nth-child(even)
 .sub-heading                       /*  for dishes section   */
 {
     text-align: center;
-    color: var(--chamuch);
+    color: var(--alpha-color);
     font-size: 2rem;
     padding-top: 1rem;
 }
@@ -114,7 +158,7 @@ section:nth-child(even)
 .heading
 {
     text-align: center;
-    color: var(--black);
+    color: var(--font-color);
     font-size: 3rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
@@ -136,9 +180,6 @@ section:nth-child(even)
 
 .btn:hover
 {
-    /* background: var(--btnhover-color); */
-    /* letter-spacing: .1rem;           **  for gap between alphabets ** */
-    /* border: .1rem solid var(--borderbtn-color); */
     box-shadow: 0rem 0rem 5rem var(--btnboxhover-color);
 }
 
@@ -164,23 +205,18 @@ header .logo
     font-weight: bolder;
 }
 
-header .logo i
-{
-    color: var(--chamuch);
-}
-
 header .navbar a
 {
     font-size: 1.7rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
-    color: var(--bg-navbar);
+    color: var(--navbaar-font-color);
 }
 
 header .navbar a:hover, header .navbar a.active
 {
     color: #fff;
-    background: var(--chamuch);
+    background: var(--alpha-color);
 }
 
 header .icons i, header .icons a
@@ -206,8 +242,9 @@ header .icons i, header .icons a
 header .icons i:hover, header .icons a:hover
 {
     color:var(--underBoxtext-color);
-    background: var(--chamuch);
-    box-shadow:0px 0px 20px var(--chamuch);
+    background: var(--alpha-color);
+    box-shadow:0px 0px 20px var(--alpha-color),
+               0px 0px 30px var(--alpha-color);
     transform: rotate(360deg);
 }
 
@@ -219,11 +256,11 @@ header .dot-open i
     width: 4.5rem;
     text-align: center;
     font-size: 1.7rem;
-    color: var(--black);
+    color: var(--font-color);
     border-radius: 50%;
     color:var(--underBoxtext-color);
-    background: var(--chamuch);
-    box-shadow:0px 0px 20px var(--chamuch);
+    background: var(--alpha-color);
+    box-shadow:0px 0px 20px var(--alpha-color);
 }
 
 header .dot-open i:hover
@@ -236,11 +273,296 @@ header .icons #menu-bars
     display:none;
 }
 
+
+/**************   Log In and Sign in section  Start   ****************/
+.login-btn
+{   
+    width: 9rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: .6rem;
+    font-size: 1.7rem;
+    background: var(--login-bg-color);
+    border: 2px solid var(--alpha-color);
+    color: var(--login-font-color);
+}
+
+.form-popup
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid var(--alpha-color);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 1rem;
+    color: var(--login-font-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--login-bg-color);
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transform:translate(-50%, -50%) scale(1.2);
+}
+
+.form-popup.show
+{
+    opacity: 1;
+    pointer-events:auto;
+    transform:translate(-50%,-50%) scale(1);
+    z-index: 1000;
+}
+
+.form-popup.active #SIGN-UP
+{
+     display: block;
+}
+.form-popup.active #LOG-IN
+{
+     display: none;
+}
+
+.form-popup #close_Btn
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.form-popup #close_Btn:hover
+{
+    color: var(--close-btn-login-signin);
+    font-size: 4rem;
+}
+
+
+/* .form-popup img
+{
+    position: absolute;
+    z-index: -2;
+    height: 30rem;
+    filter: blur(2px);
+} */
+
+.form-popup h2
+{
+    color: var(--login-font-color);
+    -webkit-text-stroke: rgb(0, 0, 0) .1px;
+    text-shadow: 0px 0px .5rem var(--login_signin-shadow-color),
+                 0px 0px .8rem var(--login_signin-shadow-color),
+                 0px 0px 1rem var(--login_signin-shadow-color),
+                 0px 0px 1.5rem var(--login_signin-shadow-color);
+    font-size: 2rem;
+    width: 100%;
+    padding: .5rem;
+    border-bottom: .3rem solid var(--alpha-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.form-popup .form-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 10rem;
+}
+
+.form-popup .form-content .form-elements
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* log-in section start */
+.log-in
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+.log-in label
+{
+    font-size: 1.8rem;
+    color: var(--login-font-color);
+}
+
+
+.log-in .input-field
+{
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field input
+{
+    border:2px solid black;
+    margin-left: 4.5rem;
+    width: 25rem;
+    font-size: 1.5rem;
+    background: var(--login-bg-color);
+    border-radius: 1rem;
+    padding: .8rem;
+    color: var(--alpha-color);
+    border: 1px solid var(--alpha-color);
+}
+
+.input-field input:hover
+{
+    box-shadow: 0px 0px 10px var(--alpha-color);
+}
+
+.input-field input::placeholder
+{
+    color: var(--login-font-color);
+}
+
+.log-in .forgot-password
+{
+    color: var(--forget-password-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.forgot-password:hover
+{
+    color: var(--login-hover-color);
+}
+
+.log-btn
+{
+    width: 9rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: .6rem;
+    font-size: 1.7rem;
+    background: var(--login-bg-color);
+    border: 2px solid var(--alpha-color);
+    color: var(--login-font-color);
+}
+
+.log-btn:hover
+{
+    color: var(--login-font-color);
+    box-shadow: 0px 0px 10px var(--alpha-color);
+}
+
+.bottom-link
+{
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+/* log-in section end */
+
+/* sign-in section start */
+
+#SIGN-UP
+{
+    display: none;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.bottom-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-link .sign-Up
+{
+    color: var(--login-sign_up);
+    font-weight: 700;
+}
+
+.sign-Up:hover
+{
+    color: var(--login-hover-color);
+}
+
+.sign-in
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+/* .sign-in label
+{
+    font-size: 1.8rem;
+    color: var(--login-font-color);
+    
+     border: 2px solid red;
+} */
+.sign-in .input-field
+{
+    margin-bottom: 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sign-in .forgot-password
+{
+    color: var(--forget-password-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.forgot-password:hover
+{
+    color: var(--login-hover-color);
+}
+
+.sign-in-btn
+{
+    width: 9rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: .6rem;
+    font-size: 1.7rem;
+    background: var(--login-bg-color);
+    border: 2px solid var(--alpha-color);
+    color: var(--login-font-color);
+}
+
+.sign-in-btn:hover
+{
+    color: var(--login-font-color);
+    box-shadow: 0px 0px 10px var(--alpha-color);
+}
+
+
+
+/* sign-in section end */
+
+
+/**************   Log-In and Sign-In section  End   ****************/
+
 #dot
 {
-    /* position: absolute;
-    margin-left: 3rem;
-    margin-top: -22px; */
     display: none;
 }
 
@@ -296,7 +618,7 @@ header .icons #menu-bars
 
 #search-form label:hover
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 #search-form #close
@@ -314,13 +636,20 @@ header .icons #menu-bars
     height: 100vh;
 }
 
+.home.homeblur
+{
+    filter: blur(5px);
+}
+
 .home .home-slider .slide
 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     padding-top: 9rem;
+    height: 98vh;
 }
 
 .home .home-slider .slide .content
@@ -336,18 +665,17 @@ header .icons #menu-bars
 .home .home-slider .slide .image img
 {
     width: 100%;
-    border-radius: 50%;
 }
 
 .home .home-slider .slide .content span
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
     font-size: 2.5rem;
 }
 
 .home .home-slider .slide .content h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 7rem;
 }
 
@@ -366,8 +694,271 @@ header .icons #menu-bars
 
 .swiper-pagination-bullet-active
 {
-    background: var(--chamuch);
+    background: var(--alpha-color);
 }
+
+/**********************  cart section   ****************************/
+.cart
+{
+   position:fixed;
+   /* left: 1; */
+   right: 2%;
+   top: 8%;
+   margin-top: 2rem;
+   height: 85vh;
+   width: 50rem;
+   z-index: 100; 
+   left:100%;
+   background-color:var(--bg-color);
+   box-shadow: inset 0px 0px 10px var(--alphaneon-color);
+   transition: .5s; 
+}
+
+.cart h1
+{
+    color:var(--font-color);
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.cart .checkOut
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.cart .checkOut div
+{
+    background-color: #e8bc0e;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.cart .checkOut .buybtn
+{
+    display: flex;
+    text-align: center;
+    border: 2px solid rgb(0, 238, 255);
+    height: 70px ;
+}
+
+.closeShopping
+{
+    border: 2px solid red;
+}
+
+.cart .checkOut div:nth-child(2)
+{
+    background-color: #1c1f25;
+    color: #fff;
+
+}
+
+.cartOpen .cart 
+{
+    /* border: 2px solid red;   */
+    left:calc(100% - 500px);
+}
+
+.container
+{
+    margin: auto;
+}
+
+.list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 3.5rem;
+    margin-top: 50px;    
+}
+
+.list .item
+{
+    border:1px solid var(--font-color);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+    box-shadow: 0 0 1.2rem var(--alphaneon-color);
+    letter-spacing: 1px;
+    position: relative;
+    transition: .5s;
+    height: 35rem;
+    width: 35rem;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+
+
+.list .item img
+{
+    /* border: 2px solid red; */
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+}
+
+.list .item .title
+{
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--font-color);
+}
+
+.list .item .prices
+{
+    font-size: 2rem;
+    color: var(--font-color);
+    position: relative;
+    display: inline-block; 
+    margin-left: 1rem;
+    display: inline;   
+
+}
+.list .item .price
+{
+    font-size: 2rem;
+    color: grey;
+    position: relative;
+    display: inline-block; 
+    margin-left: 1rem;
+
+}
+
+.list .item .newprice
+{
+    font-size: 2rem;
+    color: rgb(255, 0, 0);
+
+   position: relative;
+   display: inline-block; 
+   margin-left: 1rem;
+}
+
+.list .item .price::before
+{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: inherit;
+    
+    /* -moz-transform:rotate(25deg); */
+    /* -ms-transform:rotate(25deg); */
+    /* -o-transform:rotate(25deg); */
+    transform:rotate(25deg);
+}
+.list .item .price::after
+{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: inherit;
+    
+    /* -webkit-transform:rotate(-25deg) rotate(25deg); */
+    /* -moz-transform:rotate(-25deg); */
+    /* -ms-transform:rotate(-25deg); */
+    /* -o-transform:rotate(-25deg); */
+    transform:rotate(-25deg);
+}
+
+
+.list .item button
+{
+    background-color:var(--alpha-color);
+    color: var(--borderbtn-color);
+    padding: 10px;
+    width: 80%;
+    position: absolute;
+    
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: .1rem solid var(--borderbtn-color);
+    bottom: -25rem;
+    transition: .5s;
+}
+
+.list .item:hover button
+{
+    bottom: 1rem;
+}
+
+.listCard
+{
+    max-height: 56vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* border: 2px solid red; */
+
+}
+
+.listCard li
+{
+    display: grid;
+    grid-template-columns:  100px repeat(3, 1fr);
+    color: var(--font-color);
+    row-gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.listCard li div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img
+{
+    height:7rem;
+    width: 90%;
+    border-radius: 50%;
+}
+
+.listCard button
+{
+    width: 2rem;
+    background: var(--alpha-color);
+    border: none;
+    font-size: 2.4rem;
+}
+
+.listCard .count
+{
+    margin: 0 10px;
+}
+
 
 /********** Dishes Section **********/
 
@@ -384,51 +975,10 @@ header .icons #menu-bars
     background:var(--underBoxtext-color);                               /*****    Neon    ******/
     border-radius: .5rem;
     border: .1rem solid var(--dishesborder-color);
-    box-shadow: var(--box-shadow);
     position: relative;
     overflow: hidden;
     text-align: center;
-}
-
-.dishes .box-container .box .fa-heart,
-.dishes .box-container .box .fa-eye
-{
-    position: absolute;
-    top: 1.5rem;
-    background: var(--btn-color);
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color: var(--black);
-}
-
-.dishes .box-container .box .fa-heart:hover,
-.dishes .box-container .box .fa-eye:hover
-{
-    background: var(--chamuch);
-    color: var(--underBoxtext-color);
-}
-
-.dishes .box-container .box .fa-heart
-{
-    right: -15rem;
-}
-
-.dishes .box-container .box .fa-eye
-{
-    left: -15rem;
-}
-
-.dishes .box-container .box:hover .fa-heart
-{
-    right: 1.5rem;
-}
-
-.dishes .box-container .box:hover .fa-eye
-{
-    left: 1.5rem;
+    box-shadow: 0 0 1.2rem var(--alphaneon-color);
 }
 
 .dishes .box-container .box img
@@ -440,7 +990,7 @@ header .icons #menu-bars
 
 .dishes .box-container .box h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 2.5rem;
 }
 
@@ -452,15 +1002,26 @@ header .icons #menu-bars
 .dishes .box-container .box .stars i
 {
     font-size: 1.7rem;
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 .dishes .box-container .box span
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
     font-weight: bolder;
     margin-right: 1rem;
     font-size: 2.5rem;
+}
+
+.dishes .box-container .box .btn
+{
+    opacity: 0;
+    transition: .5s;
+}
+
+.dishes .box-container .box:hover .btn
+{
+    opacity: 1;
 }
 
 /*********** About section designing  ************/
@@ -490,7 +1051,7 @@ header .icons #menu-bars
 
 .about .row .content h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 4rem;
     padding: 5rem 0;
 }
@@ -528,13 +1089,13 @@ header .icons #menu-bars
 .about .row .content .icons-container .icons i
 {
     font-size: 2.5rem;
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 .about .row .content .icons-container .icons span
 {
     font-size: 1.5rem;
-    color: var(--black);
+    color: var(--font-color);
 }
 
 
@@ -576,7 +1137,7 @@ header .icons #menu-bars
 
 .review .slide .user h3
 {
-    color: var(--black);
+    color: var(--font-color);
     font-size: 2rem;
     padding-bottom: .5rem;
 }
@@ -584,7 +1145,7 @@ header .icons #menu-bars
 .review .slide .user i
 {
     font-size: 1.3rem;
-    color: var(--chamuch);
+    color: var(--alpha-color);
 }
 
 .review .slide p
@@ -594,6 +1155,8 @@ header .icons #menu-bars
     color: var(--light-color);
 }
 
+
+
 /************   order section designing    **************/
 
 .order form
@@ -601,10 +1164,13 @@ header .icons #menu-bars
     max-width: 90rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    border: .1rem solid rgba(0,0,0,.2);
+    border: .05rem solid var(--font-color);
     background: var(--btn-color);
     padding: 1.5rem;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .order form .inputBox
@@ -634,18 +1200,18 @@ header .icons #menu-bars
     border-radius: .5rem;
     padding: 1rem;
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--font-color);
     text-transform: none;
     margin-bottom: 1rem;
     width: 100%;
-    border: .1rem solid var(--black);
-    box-shadow: 0rem 0rem .1rem var(--chamuch);
+    border: .1rem solid var(--font-color);
+    box-shadow: 0rem 0rem .1rem var(--alpha-color);
 }
 
 .order form .inputBox .input input:focus,               /* for changing the color when click  */
 .order form .inputBox .input textarea:focus
 {
-    border: .1rem solid var(--chamuch);
+    border: .1rem solid var(--alpha-color);
 }
 
 .order form .inputBox .input textarea
@@ -654,12 +1220,29 @@ header .icons #menu-bars
     resize: none;
 }
 
-.order form .inputBox .btn
+.order form  .btn
 {
     margin-top: 0;
+    justify-content: center;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    
 }
 
+/***********  delivery gif designing  ************/
+
+
+
+
+
+
 /***********  footer (email.number,state etc) section design    ************/
+
+.footer
+{
+    position: relative;
+}
 
 .footer .box-container
 {
@@ -672,7 +1255,7 @@ header .icons #menu-bars
 {
     padding: .5rem 0;
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--font-color);
 }
 
 .footer .box-container .box a
@@ -681,17 +1264,61 @@ header .icons #menu-bars
     display: block;
     padding: .5rem 0;
     font-size: 1.5rem;
-    color: var(--light-color);
+    color: var(--font-color);
+    font-weight: 700;
+    z-index: 10;
 }
 
 .footer .box-container .box a:hover
 {
-    color: var(--chamuch);
+    color: var(--alpha-color);
     text-decoration: underline;
 }
 
 
+/*****   footer background   *********/
+
+.custom-shape-divider-bottom-1697536969 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    opacity: .5;
+    pointer-events: none;
+    z-index: -10;
+}
+
+.custom-shape-divider-bottom-1697536969 svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 223px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1697536969 .shape-fill {
+    fill: var(--alpha-color);
+}
+
+
+
 /************   loader section    ************/
+
+.main
+{
+    display: none;
+}
+
+.loading-off
+{
+    .main
+    {
+        display: block;
+    }
+}
 
 .loader-container
 {
@@ -723,7 +1350,7 @@ header .icons #menu-bars
 
 /************    Making website Responsive  *********** */
 
-@media (max-width:1095px)
+@media (max-width:1132px)
 {
     html
     {
@@ -735,7 +1362,17 @@ header .icons #menu-bars
         padding: 1rem 2rem;
     }
 
+}
 
+@media (max-width:1115px)
+{
+    .home .content
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 
@@ -753,11 +1390,16 @@ header .icons #menu-bars
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: var(--bg-navbar);
         border-top: .1rem solid rgba(0,0,0,.2);
         border-bottom: .1rem solid rgba(0,0,0,.2);
         padding: 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar > a
+    {
+        color: #000;
     }
 
     header .navbar.active
@@ -777,8 +1419,22 @@ header .icons #menu-bars
 
 }
 
+@media (max-width:503px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
 @media (max-width:480px)
 {
+    
+    html
+    {
+        font-size: 40%;
+    }
+     
     header .dot-open #dot
     {
         display: inline-block;
@@ -813,7 +1469,12 @@ header .icons #menu-bars
 
     html
     {
-        font-size: 50%;
+        font-size: 45%;
+    }
+
+    .home .home-slider .slide .content h3
+    {  
+        font-size: 6rem;
     }
 
     .dishes .box-container .box img

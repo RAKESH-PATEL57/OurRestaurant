@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Restaurant</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="manifest" href="/icons/site.webmanifest">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/site.webmanifest">
+    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -27,20 +27,23 @@
    
 
 </head>
-<body>
-
-    <header>
+<body class="body">
+   
+    <main class="main">
+    <header class="header">
        
-        <a href="#" class="logo"><i class='bx bx-restaurant'></i>OurRestaurant</i></a>
+        <a href="#" class="logo">OurRestaurant</a>
    
 
             <nav class="navbar">
-                <a class="active" href="#home">Home</a>
+                <a href="#home">Home</a>
+                <!-- <a class="active" href="#home">Home</a> -->
+
                 <a href="#dishes">Dishes</a>
                 <a href="#about">About</a> 
                 <a href="#review">Review</a>
                 <a href="#order">Order</a>
-                <a href="/login/index.html">LogIn</a>
+                <!-- <a href="./login.html">LogIn</a> -->
             </nav>
             
             <div class="dot-open">
@@ -48,14 +51,68 @@
             </div>
 
             <div class="icons">
+                <button class="login-btn" id="form-Open">LOG IN</button>
                 <i class="bx bx-menu" id="menu-bars"></i>
-                <i class='bx bxs-cool' id="neon"></i>
+                <!-- <i class='bx bxs-cool' id="neon-icon"></i> -->
                 <i class='bx bx-moon' id="darkMode-icon"></i>
                 <i class='bx bx-search' id="search-icon"></i>
-                <a href="#" class='bx bx-heart' id="heart"></a>
-                <a href="#" class='bx bx-cart' id="cart"></a>
+                <!-- <a href="#" class='bx bx-heart' id="heart"></a> -->
+                <a href="#" class='bx bx-cart'><span class="quantity">0</span></a>
             </div>
   </header>
+
+  <!-- login section  -->
+  <div class="form-popup">
+    <i class='bx bx-x' id="close_Btn"></i>
+    <div class="form-content" id="LOG-IN">
+        <h2>LOGIN</h2>
+        <form class="form-elements" action="#">
+            <div class="log-in">
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="text" placeholder="Enter email id" required>
+                </div>
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button class="log-btn" id="Log-in-Btn" type="submit">Log In</button>
+        </form>
+        <div class="bottom-link">
+            Don't have an account?
+            <a class="sign-Up" id="signup"  href="#">Sign Up</a>
+        </div>
+    </div>
+    <div class="form-content" id="SIGN-UP">
+        <h2>SIGN UP</h2>
+        <form class="form-elements" action="#">
+            <div class="sign-in">
+                <div class="input-field">
+                    <!-- <label>Enter your Name</label> -->
+                    <input type="text" placeholder="Enter Your e-mail" required>
+                </div>
+                <div class="input-field">
+                    <!-- <label>Email</label> -->
+                    <input type="text" placeholder="Create your password" required>
+                </div>
+                <div class="input-field">
+                    <!-- <label>Password</label> -->
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <!-- <a href="#" class="forgot-password">Forgot Password?</a> -->
+            </div>
+            <button class="sign-in-btn" id="Sign-In-Btn" type="submit">Sign In</button>
+        </form>
+        <div class="bottom-link">
+            Already have an account?
+            <a class="sign-Up" id="login" href="#">Log-In</a>
+        </div>
+    </div>
+  </div>
+
+  
 
   <!-- search form  -->
 
@@ -65,6 +122,16 @@
         <i class="bx bx-x" id="close"></i>
   </form>
 
+   <!-- cart section  -->
+  <div class="cart">
+       <h1>Cart items</h1>
+       <ul class="listCard"></ul>
+       <div class="checkOut"> 
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <button class="buybtn">Buy Now</button>
+        </div>
+    </div>
 
    <!-- section design -->
     <section class="home" id="home">
@@ -76,40 +143,40 @@
                     <div class="content">
                         <span>Our Special Dish</span>
                         <h3>Spicy Noodles</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p> -->
                         <a href="#" class="btn">Order Now</a>
                     </div>
                     
                     <div class="image">
-                        <img src="images/noodle.jpg" alt="">
+                        <img src="./images/noodle.png" alt="">
                     </div>
                 
                 </div>
 
                 <div class="swiper-slide slide">
-                    <div class="content">
+                    <div class="content" id="chicken">
                         <span>Our Special Dish</span>
                         <h3>fried chicken</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p> -->
                         <a href="#" class="btn">Order Now</a>
                     </div>
                     
                     <div class="image">
-                        <img src="/images/chicken.jpg" alt="">
+                        <img src="./images/chicken.png" alt="">
                     </div>
                 
                 </div>
 
-                <div class="swiper-slide slide">
+                <div class="swiper-slide slide" id="hot_pizaa">
                     <div class="content">
                         <span>Our Special Dish</span>
                         <h3>hot pizza</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto saepe aperiam!</p> -->
                         <a href="#" class="btn">Order Now</a>
                     </div>
                     
                     <div class="image">
-                        <img src="images/pizaa.jpg" alt="">
+                        <img src="./images/pizaa.png" alt="">
                     </div>                
                 </div>
 
@@ -123,143 +190,16 @@
 
 
     <!--  Dishes Section    -->
-    <section>
+    <section>   
 
         <div class="dishes" id="dishes">
     
-            <h3 class="sub-heading"> our dishes </h3>
+            <!-- <h3 class="sub-heading"> our dishes </h3> -->
             <h1 class="heading"> popular dishes </h1>
-    
-            <div class="box-container">
-                
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes1.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes2.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes3.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes4.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes5.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes6.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes7.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="images/dishes8.jpg" alt="">
-                    <h3>Tasty Food</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>$15.99</span>
-                    <a href="#" class="btn">Add to cart</a>
-                </div>
-
+            
+            <!-- heart of food -->
+            <div class="container">
+                <div class="list"></div>
             </div>
 
         </div>
@@ -308,7 +248,7 @@
 
     <!-- Review section -->
 
-    <section class="review" id="review">
+    <sectio class="review" id="review">
 
         <h3 class="sub-heading"> customer's review </h3>
         <h1 class="heading"> what they say </h1>
@@ -481,11 +421,11 @@
                 <div class="inputBox">
                     <div class="input">
                         <span>your address</span>
-                       <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                       <textarea name="" placeholder="enter your address" cols="30" rows="10"></textarea>
                     </div>
                     <div class="input">
                         <span>your message</span>
-                       <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                       <textarea name="" placeholder="enter your message"  cols="30" rows="10"></textarea>
                     </div>
                 </div>
 
@@ -495,6 +435,7 @@
 
         </div>
     </section>
+
 
     <!--  footer (email.number,state etc) section design    -->
 
@@ -538,11 +479,19 @@
                 <a href="#">Instagram</a>
                 <a href="https://www.linkedin.com/in/rakesh-patel-567449242/">linkedin</a>
             </div>
+            
+            <div class="custom-shape-divider-bottom-1697536969">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
 
         </div>
 
     </section>
-
+</main>
 
     <!--  loader part   -->
     <div class="loader-container">
