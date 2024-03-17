@@ -118,11 +118,11 @@ body
     background: var(--bg-color);
 }
 
-.body.bodyScroll
+/* .body.bodyScroll
 {
     overflow-y: hidden;
     height: 100vh;
-}
+} */
 
 html
 {
@@ -130,6 +130,23 @@ html
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
 }
+
+.header
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-content
+{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .header.headerblur
 {
@@ -219,7 +236,17 @@ header .navbar a:hover, header .navbar a.active
     background: var(--alpha-color);
 }
 
-header .icons i, header .icons a
+.header .icons-container
+{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border: 2px solid aqua;
+     position: relative;
+}
+
+.icons-container .icons i, .icons-container .icons a
 {
     cursor: pointer;
     margin-left:.5rem;
@@ -243,9 +270,12 @@ header .icons i:hover, header .icons a:hover
 {
     color:var(--underBoxtext-color);
     background: var(--alpha-color);
-    box-shadow:0px 0px 20px var(--alpha-color),
-               0px 0px 30px var(--alpha-color);
+    box-shadow:0px 0px 20px var(--alpha-color),               0px 0px 30px var(--alpha-color);
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
 }
 
 header .dot-open i
@@ -256,16 +286,23 @@ header .dot-open i
     width: 4.5rem;
     text-align: center;
     font-size: 1.7rem;
-    color: var(--font-color);
     border-radius: 50%;
     color:var(--underBoxtext-color);
     background: var(--alpha-color);
     box-shadow:0px 0px 20px var(--alpha-color);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 header .dot-open i:hover
 {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
 }
 
 header .icons #menu-bars
@@ -446,6 +483,7 @@ header .icons #menu-bars
 .forgot-password:hover
 {
     color: var(--login-hover-color);
+
 }
 
 .log-btn
@@ -1447,12 +1485,14 @@ header .icons #menu-bars
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        width: 100%;
         top: 100%;
         left: 10;
         right: 0;
+        gap: 1rem;
         background: transparent;
         border-top: .1rem solid rgba(0,0,0,.2);
-        border-bottom: .1rem solid rgba(0,0,0,.2);
+        border: .1rem solid rgba(0,0,0,.2);
         padding: 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
