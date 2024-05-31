@@ -85,15 +85,18 @@ window.onscroll = () =>
 //   });
 
 
-document.querySelector('#search-icon').onclick = () =>
-{
-    document.querySelector('#search-form').classList.toggle('active');
-}
 
-document.querySelector('#close').onclick = () =>
-{
-    document.querySelector('#search-form').classList.remove('active');
-}
+// search section           *********************
+
+// document.querySelector('#search-icon').onclick = () =>
+// {
+//     document.querySelector('#search-form').classList.toggle('active');
+// }
+
+// document.querySelector('#close').onclick = () =>
+// {
+//     document.querySelector('#search-form').classList.remove('active');
+// }
 
 
 // *************   Image slide    ***************//
@@ -154,13 +157,6 @@ function fadeOut()
 window.onload = fadeOut;
 
 
-
-
-
-
-
-
-
 //dot
 let dot = document.querySelector('#dot');
 let icons = document.querySelector('.icons');
@@ -181,20 +177,20 @@ const signInBtn = document.querySelector("#signup");
 
 const homeheader = document.querySelector('.header');
 const homepage = document.querySelector('.home');
-const bodyScroll = document.querySelector('.body');
+// const bodyScroll = document.querySelector('.body');
 
 formOpenBtn.onclick = () => {
     formPopUp.classList.add("show");
     homeheader.classList.add('headerblur');
     homepage.classList.add('homeblur');
-    bodyScroll.classList.add('bodyScroll');
+    // bodyScroll.classList.add('bodyScroll');
   
 };
 formCloseButton.onclick = () => {
     formPopUp.classList.remove("show");
     homeheader.classList.remove('headerblur');
     homepage.classList.remove('homeblur');
-    bodyScroll.classList.remove('bodyScroll');
+    // bodyScroll.classList.remove('bodyScroll');
 }
 
 signInBtn.addEventListener("click", (e) => {
