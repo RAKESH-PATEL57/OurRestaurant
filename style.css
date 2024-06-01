@@ -15,8 +15,9 @@
 
 :root
 {
-    --alpha-color: #dd7230;
-    --font-color:#160f35;
+    --alpha-color: #30c3dd9a;
+    /* --alpha-color: #dd7230; */
+    --font-color:#000000;
     --bg-navbar:#ffffff;
 
     --light-color:#666;
@@ -31,7 +32,7 @@
     --dots-color:var(--light-color);
 
     --btnhover-color:var(--alpha-color);
-    --borderbtn-color:#fff;
+    --borderbtn-color:#000000;
     --bgbtn-color:#192a56;
     --btnboxhover-color:white;
 
@@ -54,12 +55,12 @@
 {
     --bg-color:black;
     --logo-color:rgb(255, 255, 255);
-    --font-color:#fff;
+    --font-color:#ffffff;
 
     
     --bg-navbar:#1b1e22;
     --navbaar-font-color:#ffffff;
-    
+    --borderbtn-color:#fff;
     --light-color:#e4e1e1;
     --dots-color:#ffffff;
     --evenPages-color:black;
@@ -72,7 +73,8 @@
       /****  login and sign-up section colors  *****/
     --login-bg-color:#000000;
     --login_signin-shadow-color:var(--alpha-color);
-    --login-font-color:#ffffff;
+    --login-fontf-color:gray;
+    --login-fonts-color:#ffffff;
     --login-sign_up:#ff0000;
     --login-hover-color:#ff00dd;
     --forget-password-color:#ff0000;
@@ -209,10 +211,12 @@ header
     top: 0;
     left: 0;
     right: 0;
-    background:var(--underBoxtext-color);
+    /* background:var(--underBoxtext-color); */
+    background:transparent;
     padding: 1rem 3%;
     z-index: 1000;
     box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
 }
 
 header .logo
@@ -242,7 +246,7 @@ header .navbar a:hover, header .navbar a.active
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     border: 2px solid aqua;
+     /* border: 2px solid aqua; */
      position: relative;
 }
 
@@ -432,14 +436,6 @@ header .icons #menu-bars
     padding: 1rem;
 }
 
-
-.log-in label
-{
-    font-size: 1.8rem;
-    color: var(--login-font-color);
-}
-
-
 .log-in .input-field
 {
     margin-bottom: 2rem;
@@ -447,6 +443,12 @@ header .icons #menu-bars
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.input-field label
+{
+    font-size: 1.8rem;
+    color: var(--login-font-color);
 }
 
 .input-field input
@@ -458,7 +460,7 @@ header .icons #menu-bars
     background: var(--login-bg-color);
     border-radius: 1rem;
     padding: .8rem;
-    color: var(--alpha-color);
+    color: var(--login-fonts-color);
     border: 1px solid var(--alpha-color);
 }
 
@@ -469,7 +471,7 @@ header .icons #menu-bars
 
 .input-field input::placeholder
 {
-    color: var(--login-font-color);
+    color: var(--login-fontf-color);
 }
 
 .log-in .forgot-password
@@ -483,7 +485,6 @@ header .icons #menu-bars
 .forgot-password:hover
 {
     color: var(--login-hover-color);
-
 }
 
 .log-btn
@@ -837,7 +838,8 @@ header .icons #menu-bars
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+    background-color:rgba(191, 191, 191, 0.122);
     padding: 20px;
     box-shadow: 0 0 1.2rem var(--alphaneon-color);
     letter-spacing: 1px;
@@ -887,9 +889,8 @@ header .icons #menu-bars
 
 .list .item .newprice
 {
-    font-size: 2rem;
-    color: rgb(255, 0, 0);
-
+   font-size: 2rem;
+   color: rgb(255, 0, 0);
    position: relative;
    display: inline-block; 
    margin-left: 1rem;
@@ -904,10 +905,6 @@ header .icons #menu-bars
     right: 0;
     border-top: 2px solid;
     border-color: inherit;
-    
-    /* -moz-transform:rotate(25deg); */
-    /* -ms-transform:rotate(25deg); */
-    /* -o-transform:rotate(25deg); */
     transform:rotate(25deg);
 }
 .list .item .price::after
@@ -919,19 +916,17 @@ header .icons #menu-bars
     right: 0;
     border-top: 2px solid;
     border-color: inherit;
-    
-    /* -webkit-transform:rotate(-25deg) rotate(25deg); */
-    /* -moz-transform:rotate(-25deg); */
-    /* -ms-transform:rotate(-25deg); */
-    /* -o-transform:rotate(-25deg); */
     transform:rotate(-25deg);
 }
 
 
 .list .item button
 {
-    background-color:var(--alpha-color);
-    color: var(--borderbtn-color);
+    /* background-color:var(--alpha-color); */
+    /* background-color:gray; */
+    backdrop-filter:blur(10px);
+    background: transparent;
+    color: var(--font-color);
     padding: 10px;
     width: 80%;
     position: absolute;
